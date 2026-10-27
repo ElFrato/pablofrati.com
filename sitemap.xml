@@ -1,10 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pablofrati.com/</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://pablofrati.com/metodo.html</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://pablofrati.com/sobre-mi.html</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://pablofrati.com/caso-paydece.html</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://pablofrati.com/caso-panel.html</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://pablofrati.com/caso-checkout.html</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://pablofrati.com/caso-ortopedia.html</loc><lastmod>2026-10-20</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://pablofrati.com/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/"/>
+  </url>
+  <url>
+    <loc>https://pablofrati.com/en/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/"/>
+  </url>
+  <url>
+    <loc>https://pablofrati.com/metodo.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/metodo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/metodo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/metodo.html"/>
+  </url>
+  <url>
+    <loc>https://pablofrati.com/en/metodo.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/metodo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/metodo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/metodo.html"/>
+  </url>
+  <url>
+    <loc>https://pablofrati.com/sobre-mi.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/sobre-mi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/sobre-mi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/sobre-mi.html"/>
+  </url>
+  <url>
+    <loc>https://pablofrati.com/en/sobre-mi.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/sobre-mi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/sobre-mi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/sobre-mi.html"/>
+  </url>
+  <url>
+    <loc>https://pablofrati.com/caso-paydece.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-paydece.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-paydece.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-paydece.html"/>
+  </url>
+  <url>
+    <loc>https://pablofrati.com/en/caso-paydece.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-paydece.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-paydece.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-paydece.html"/>
+  </url>
+  <url>
+    <loc>https://pablofrati.com/caso-panel.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-panel.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-panel.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-panel.html"/>
+  </url>
+  <url>
+    <loc>https://pablofrati.com/en/caso-panel.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-panel.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-panel.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-panel.html"/>
+  </url>
+  <url>
+    <loc>https://pablofrati.com/caso-checkout.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-checkout.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-checkout.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-checkout.html"/>
+  </url>
+  <url>
+    <loc>https://pablofrati.com/en/caso-checkout.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-checkout.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-checkout.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-checkout.html"/>
+  </url>
+  <url>
+    <loc>https://pablofrati.com/caso-ortopedia.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-ortopedia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-ortopedia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-ortopedia.html"/>
+  </url>
+  <url>
+    <loc>https://pablofrati.com/en/caso-ortopedia.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-ortopedia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-ortopedia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-ortopedia.html"/>
+  </url>
 </urlset>

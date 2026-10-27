@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>(function (W) {
+  var toco = false, her = null, D = W.__pfLl = { y: 0, recarga: false, toco: function () { return toco; } };
+  try { history.scrollRestoration = 'manual'; } catch (e) {}
+  function pagina(p) { p = (p.split('/').pop() || '').replace(/\.html?$/i, ''); return (p || 'index') + '.html'; }
+  var pg = pagina(location.pathname), marco = true, nv = '', ok = true;
+  try { marco = W.top !== W; } catch (e) {}
+  try { nv = (performance.getEntriesByType('navigation')[0] || {}).type || ''; } catch (e) {}
+  function get(k) { try { return sessionStorage.getItem(k); } catch (e) { ok = false; return null; } }
+  function set(k, v) { try { sessionStorage.setItem(k, v); } catch (e) { ok = false; } }
+  function del(k) { try { sessionStorage.removeItem(k); } catch (e) {} }
+  var via = get('pf-nav'), prev = get('pf-page'), py = +get('pf-y') || 0, back = get('pf-back'), envion = get('pf-envion') === '1';
+  del('pf-nav'); del('pf-back'); del('pf-envion');
+  var link = via === pg || nv === 'back_forward', ult = null;
+  if (ok && !prev && marco) { try { ult = JSON.parse(localStorage.getItem('pf-ult') || 'null'); } catch (e) {} }
+  if (ult && ult.p && ult.h && Date.now() - ult.h < 30000) { prev = ult.p; py = +ult.y || 0; }
+  var PAG = /^(index|metodo|sobre-mi|caso-[a-z]+)\.html$/;
+  if (pg === 'index.html' && ok && marco && !link && prev && prev !== pg && PAG.test(prev)) {
+    set('pf-back', String(py)); document.documentElement.style.visibility = 'hidden'; location.replace(prev); return;
+  }
+  var y = 0;
+  if (back !== null && !link) y = +back || 0;
+  else if (!link && prev === pg) y = py;
+  else if (location.hash) y = null;
+  if (y !== null && y > 0) { D.recarga = true; W.__keepY = true; }
+  D.y = y;
+  set('pf-page', pg); set('pf-y', String(y || 0));
+  var yv = y || 0;
+  function anotar(h) {
+    set('pf-y', String(yv));
+    try { localStorage.setItem('pf-ult', JSON.stringify({ p: pg, y: yv, h: h ? Date.now() : 0 })); } catch (e) {}
+  }
+  var st = 0;
+  addEventListener('scroll', function () { yv = Math.round(W.scrollY); clearTimeout(st); st = setTimeout(function () { anotar(false); }, 150); }, { passive: true });
+  addEventListener('pagehide', function () { clearTimeout(st); anotar(true); });
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a || e.button > 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || (a.target && a.target !== '_self')) return;
+    var u; try { u = new URL(a.getAttribute('href'), location.href); } catch (x) { return; }
+    if (u.origin !== location.origin) return;
+    var to = pagina(u.pathname); if (to !== pg && PAG.test(to)) { set('pf-nav', to); if (performance.now() - rueda < 200) set('pf-envion', '1'); }
+  }, true);
+  var rueda = -1e9;
+  addEventListener('wheel', function (e) {
+    var now = performance.now(), d = Math.abs(e.deltaY) + Math.abs(e.deltaX);
+    rueda = now;
+    if (toco) return;
+    if (e.ctrlKey) her = false;
+    else if (her === null) her = envion && now < 1500 ? { t: now, d0: d, n: 0 } : false;
+    else if (her && now - her.t > 120) her = false;
+    if (her && her.n < 4 && d > 4 && d > 1.6 * her.d0) her = false;
+    if (!her) { toco = true; return; }
+    her.t = now; her.n++;
+    if (e.cancelable) e.preventDefault();
+    e.stopImmediatePropagation();
+  }, { capture: true, passive: false });
+  ['touchstart', 'keydown', 'pointerdown'].forEach(function (t) { addEventListener(t, function () { toco = true; }, { capture: true, passive: true }); });
+  var fin = 3000, libre = false;
+  function poner() {
+    if (toco || libre || performance.now() > fin) return;
+    var yy = D.fn ? D.fn() : D.y; if (yy == null) return;
+    if (Math.abs(W.scrollY - yy) < 2) return;
+    if (W.__lenis) { try { W.__lenis.scrollTo(yy, { immediate: true, force: true }); } catch (e) {} }
+    W.scrollTo(0, yy);
+  }
+  D.poner = poner;
+  D.fijar = function (fn) { D.fn = fn; poner(); };
+  D.soltar = function () { libre = true; };
+  addEventListener('scroll', poner, { passive: true });
+  [0, 80, 300, 800, 1500, 2500].forEach(function (ms) { setTimeout(poner, ms); });
+  addEventListener('load', function () { fin = Math.max(fin, performance.now() + 1500); poner(); [80, 300, 800].forEach(function (ms) { setTimeout(poner, ms); }); });
+  addEventListener('pageshow', poner);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(poner);
+})(window);</script>
+<title>About me · Pablo Frati</title>
+<meta name="description" content="I live in Buenos Aires and have designed products at fintech and e-commerce startups since 2022.">
+<link rel="canonical" href="https://pablofrati.com/en/sobre-mi.html">
+<link rel="alternate" hreflang="es" href="https://pablofrati.com/sobre-mi.html">
+<link rel="alternate" hreflang="en" href="https://pablofrati.com/en/sobre-mi.html">
+<link rel="alternate" hreflang="x-default" href="https://pablofrati.com/sobre-mi.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Pablo Frati">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="About me · Pablo Frati">
+<meta property="og:description" content="I live in Buenos Aires and have designed products at fintech and e-commerce startups since 2022.">
+<meta property="og:url" content="https://pablofrati.com/en/sobre-mi.html">
+<meta property="og:image" content="https://pablofrati.com/img/og/en/sobre-mi.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="“Pablo Frati” Next to it, my photo.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About me · Pablo Frati">
+<meta name="twitter:description" content="I live in Buenos Aires and have designed products at fintech and e-commerce startups since 2022.">
+<meta name="twitter:image" content="https://pablofrati.com/img/og/en/sobre-mi.png">
+<meta name="twitter:image:alt" content="“Pablo Frati” Next to it, my photo.">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../fonts/geist-latin-wght-normal.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../fonts/geist-mono-latin-wght-normal.woff2">
+<link rel="stylesheet" href="../comun/v5.css">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="apple-touch-icon" href="../img/favicon-180.png">
+<style>
+@font-face { font-family: "Geist"; font-weight: 100 900; font-display: swap;
+  src: url(../fonts/geist-latin-wght-normal.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Geist"; font-weight: 100 900; font-display: swap;
+  src: url(../fonts/geist-latin-ext-wght-normal.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Geist Mono"; font-weight: 100 900; font-display: swap;
+  src: url(../fonts/geist-mono-latin-wght-normal.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Geist Mono"; font-weight: 100 900; font-display: swap;
+  src: url(../fonts/geist-mono-latin-ext-wght-normal.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+:root {
+  color-scheme: light;
+  --page: #E3E8EE;
+  --surface: #FFFFFF;
+  --ink: #0D1117;
+  --ink-2: #434B57;
+  --ink-3: #5B6470;
+  --line: #CDD4DD;
+  --mark: #3B5BDB;
+  --on-mark: #FFFFFF;
+  --f: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --fm: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --gx: 40px;
+}
+
+* { box-sizing: border-box; }
+html { overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--page); color: var(--ink); font-family: var(--f); font-size: var(--t-body); line-height: 1.5; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--mark); outline-offset: 3px; }
+:where(:focus-visible) { border-radius: var(--r-s); }
+
+.so { max-width: 1600px; margin: 0 auto; padding: calc(var(--v5-bar) + var(--s16)) var(--gx) 0; }
+.sec-k { font-family: var(--fm); font-size: var(--t-label); letter-spacing: .04em; color: var(--ink-3); margin: 0; }
+.yo-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s16); align-items: end; }
+.yo-yo { display: flex; align-items: center; gap: clamp(18px, 1.6667vw, 24px); }
+.yo-top h1, .yo-n { margin: 0; font-size: calc(var(--t-display) * 60 / 72); font-weight: var(--w-head); letter-spacing: -0.035em; line-height: 1.02; }
+.yo-top h1 { text-wrap: balance; }
+.yo-nm { position: relative; min-width: 0; }
+.yo-nm.mezcla h1 { color: transparent; }
+.yo-n { position: absolute; left: 0; top: 0; white-space: nowrap; color: var(--ink); pointer-events: none; }
+.yo-top h1 em { font-style: normal; color: var(--mark); }
+.yo-pr .sec-k { margin-bottom: var(--s3); }
+.yo-q { margin: 0; max-width: 52ch; font-size: var(--t-lead); line-height: 1.45; color: var(--ink-2); text-wrap: pretty; }
+.yo-q .nw { white-space: nowrap; }
+
+.yo-foto { position: relative; flex: none; width: calc(clamp(120px, 12.5vw, 184px) * 140 / 184); aspect-ratio: 1; perspective: 1100px; }
+.yo-foto::before { content: ""; position: absolute; inset: -9px; border: 1.5px solid var(--mark); border-radius: 20px; transform: rotate(1.4deg); opacity: .55; }
+.yo-foto .flip { position: absolute; inset: 0; transform-style: preserve-3d; transform: rotate(-2deg) rotateY(180deg); }
+.yo-foto.mascara .flip { transform: rotate(-2deg) rotateY(0deg); }
+.yo-foto .cara { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.yo-foto .dorso { transform: rotateY(180deg); }
+.yo-foto img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-l); box-shadow: 0 0 0 1px var(--line), var(--shadow); }
+.yo-foto .frente img { image-rendering: pixelated; }
+.bl { margin-top: var(--s16); padding-top: var(--s10); border-top: 1px solid var(--line); }
+.tr { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--s6) var(--s16); padding: var(--s10) 0 0; }
+.tr + .tr { margin-top: var(--s10); border-top: 1px solid var(--line); }
+.tr-y, .st-k, .cs-k { font-family: var(--fm); font-size: var(--t-label); letter-spacing: .02em; color: var(--ink-3); }
+.tr-y { margin: 0; }
+.tr-t { margin: var(--s2) 0 0; font-size: var(--t-h3); font-weight: var(--w-head); letter-spacing: -0.02em; line-height: 1.15; }
+.tr-r { margin: var(--s1) 0 0; font-weight: var(--w-strong); }
+.tr-c { margin: var(--s1) 0 0; color: var(--ink-2); }
+.tr-d { margin: var(--s6) 0 0; max-width: 52ch; font-size: var(--t-lead); line-height: 1.45; color: var(--ink-2); text-wrap: pretty; }
+.tr-d + .tr-d { margin-top: var(--s4); }
+.tr-b > :first-child { margin-top: 0; }
+.tr { transition: opacity .6s ease, transform .6s cubic-bezier(.2, .8, .2, 1); }
+.tr .cards { transition: opacity .6s ease .12s, transform .6s cubic-bezier(.2, .8, .2, 1) .12s; }
+.tr.pre { opacity: 0; transform: translateY(18px); }
+.tr.pre .cards { opacity: 0; transform: translateY(12px); }
+.st { display: flex; flex-wrap: wrap; gap: var(--s6) var(--s12); margin: var(--s6) 0 0; }
+.st dt { font-size: var(--t-stat); font-weight: var(--w-head); letter-spacing: -0.03em; line-height: 1; }
+.st dd { margin: var(--s2) 0 0; color: var(--ink-2); }
+.st-k { margin: var(--s3) 0 0; }
+.cards { list-style: none; margin: var(--s6) 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s4); }
+.cs { display: flex; flex-direction: column; height: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-l); overflow: hidden; text-decoration: none; color: var(--ink); transition: border-color .15s, transform .2s; }
+.cs img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; background: var(--chrome); border-bottom: 1px solid var(--line); }
+.cards.uno { grid-template-columns: minmax(0, 1fr); }
+.cards.uno .cs img { aspect-ratio: auto; height: auto; }
+.cs-b { display: flex; flex-direction: column; gap: var(--s1); padding: var(--s4); flex: 1; }
+.cs-t { font-weight: var(--w-head); font-size: var(--t-ui); }
+.cs-k { color: var(--ink-2); font-family: var(--f); font-size: var(--t-small); letter-spacing: 0; line-height: 1.45; }
+.cs-go { margin-top: auto; padding-top: var(--s3); display: inline-flex; align-items: center; gap: var(--s1); font-size: var(--t-small); font-weight: var(--w-strong); color: var(--mark-t); }
+.cs-go svg { width: 14px; height: 14px; }
+@media (hover: hover) and (pointer: fine) { .cs:hover { border-color: var(--ink-3); transform: translateY(-2px); } }
+.bl-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s10); margin-bottom: var(--s24); }
+.sk { margin: var(--s3) 0 0; color: var(--ink-2); line-height: 1.6; text-wrap: pretty; }
+.sk b { color: var(--ink); font-weight: var(--w-strong); }
+.sk-2 { margin-top: var(--s6); }
+@media (prefers-reduced-motion: reduce) { .cs, .tr, .tr .cards { transition: none; } .cs:hover { transform: none; } }
+
+.line { --sk2: color-mix(in srgb, var(--mark) 45%, transparent); }
+.line { position: relative; margin: 72px 0 0; }
+.line svg.tl { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.line .tl path { fill: none; stroke: var(--mark); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.line .tl path.ghost { stroke: var(--sk2); stroke-width: 1; }
+.line ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.line li { position: relative; padding-top: 128px; opacity: calc(.38 + .62 * var(--a, 1)); }
+.line .dot { position: absolute; left: 0; top: var(--dy); width: 14px; height: 14px; margin: -7px 0 0 -1px; border-radius: 50%; background: var(--page); border: 2px solid var(--mark); }
+.line li.now .dot { background: var(--mark); box-shadow: 0 0 0 5px color-mix(in srgb, var(--mark) 22%, transparent); }
+.line .y { font-family: var(--fm); font-size: 12.5px; color: var(--mark-t); }
+.line .t { margin-top: 4px; font-weight: 600; font-size: 17px; letter-spacing: -.01em; }
+.line .d { margin-top: 2px; font-size: 14.5px; color: var(--ink-3); line-height: 1.45; max-width: 30ch; }
+
+@media (min-width: 861px) and (max-width: 1250px) { .cs img { height: auto; aspect-ratio: auto 16 / 10; } }
+
+@media (min-width: 861px) and (max-height: 640px) {
+  .so { padding-top: calc(var(--v5-bar) + var(--s10)); }
+}
+
+@media (max-width: 860px) {
+  :root { --gx: max(16px, env(safe-area-inset-left), env(safe-area-inset-right)); }
+  .so { padding-top: calc(var(--v5-bar) + var(--s10)); }
+  .yo-top { grid-template-columns: minmax(0, 1fr); gap: var(--s10); }
+  .yo-yo { gap: 18px; }
+  .yo-foto { width: calc(clamp(88px, 28vw, 120px) * 140 / 184); }
+  .yo-foto::before { inset: -7px; border-radius: 15px; }
+  .yo-foto img { border-radius: var(--r-m); }
+  .tr { grid-template-columns: minmax(0, 1fr); }
+  .cards { grid-template-columns: minmax(0, 1fr); }
+  .cs img { height: auto; aspect-ratio: auto 16 / 10; }
+  .bl-3 { grid-template-columns: minmax(0, 1fr); gap: var(--s8); }
+  .line { margin-top: 36px; padding-left: 44px; }
+  .line ol { grid-template-columns: 1fr; gap: 24px; }
+  .line li { padding-top: 0; }
+  .line .dot { left: calc(-44px + var(--dx, 10px)); top: 8px; margin: -7px 0 0 -7px; transform: none; }
+  .line li:nth-child(1) { --dx: 12px; } .line li:nth-child(2) { --dx: 30px; } .line li:nth-child(3) { --dx: 18px; } .line li:nth-child(4) { --dx: 28px; }
+}
+</style>
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
+  api_host: 'https://us.i.posthog.com',
+  defaults: '2026-05-30',
+  persistence: 'memory',
+  person_profiles: 'never'
+})
+</script>
+</head>
+<body>
+<header class="v5-bar" id="v5-bar">
+  <nav class="v5-nav" aria-label="Main">
+    <a class="v5-nb" href="index.html">Home</a>
+    <div class="v5-casos"><button type="button" class="v5-nb" id="v5-casos-b" aria-expanded="false" aria-controls="v5-casos">Cases <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button><div class="v5-dd" id="v5-casos" hidden><ul aria-label="The four cases"><li><a href="caso-paydece.html"><span class="v5-th"><img src="../img/hero-paydece.webp" alt="" width="96" height="60" loading="lazy" decoding="async"></span><span><span class="v5-nm">Paydece <span class="v5-k">2022–2025</span></span><span class="v5-ln">I designed the entire platform: +1,433% in traded volume and +1,300% in users.</span></span></a></li><li><a href="caso-panel.html"><span class="v5-th"><img src="../img/hero-panel-proto.webp" alt="" width="96" height="60" loading="lazy" decoding="async"></span><span><span class="v5-nm">Seller dashboard <span class="v5-k">Liberty · 2026</span></span><span class="v5-ln">I brought 18 screens together into a single dashboard and took it to production in 10 days.</span></span></a></li><li><a href="caso-checkout.html"><span class="v5-th"><img src="../img/hero-checkout.webp" alt="" width="96" height="60" loading="lazy" decoding="async"></span><span><span class="v5-nm">Checkout <span class="v5-k">Liberty · 2026</span></span><span class="v5-ln">I redesigned Liberty's purchase flow.</span></span></a></li><li><a href="caso-ortopedia.html"><span class="v5-th"><img src="../img/hero-ortopedia.webp" alt="" width="96" height="60" loading="lazy" decoding="async"></span><span><span class="v5-nm">Orthopedic store <span class="v5-k">2026</span></span><span class="v5-ln">I built the whole system with AI: frontend, backend and database.</span></span></a></li></ul></div></div>
+    <a class="v5-nb" href="metodo.html">Method</a>
+    <a class="v5-nb" href="sobre-mi.html" aria-current="page">About me</a>
+    <a class="v5-nb v5-cvb" href="../Pablo-Frati-CV-EN.pdf" target="_blank" rel="noopener">CV <svg class="v5-ext" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 3.5h7v7M12.5 3.5l-9 9"/></svg></a>
+    <span class="v5-raya" aria-hidden="true"></span>
+    <button type="button" class="v5-nb v5-ct" data-v5-contacto aria-haspopup="dialog" aria-expanded="false" aria-controls="v5-contacto">Contact</button>
+  </nav>
+</header>
+<button type="button" class="v5-fab" id="v5-fab" aria-expanded="false" aria-controls="v5-ab" aria-label="Contact"><svg class="v5-f-c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5.5h14a1.5 1.5 0 0 1 1.5 1.5v8.5A1.5 1.5 0 0 1 19 17h-8.5L6 20.5V17H5a1.5 1.5 0 0 1-1.5-1.5V7A1.5 1.5 0 0 1 5 5.5z"/></svg><svg class="v5-f-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button>
+<div class="v5-ab" id="v5-ab" role="group" aria-label="Contact" hidden><div class="v5-ab-velo"></div><a class="v5-ab-b" style="--i:0;--j:2" href="https://www.linkedin.com/in/pablofrati/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="v5-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span class="v5-ab-t" aria-hidden="true">LinkedIn</span></a><a class="v5-ab-b" style="--i:1;--j:1" href="mailto:pjfrati@gmail.com" data-v5-ab-copiar aria-label="Copy email: pjfrati@gmail.com"><svg class="v5-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg><span class="v5-ab-t" aria-hidden="true">pjfrati@gmail.com</span></a><a class="v5-ab-b" style="--i:2;--j:0" href="https://github.com/ElFrato" target="_blank" rel="noopener" aria-label="GitHub"><svg class="v5-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span class="v5-ab-t" aria-hidden="true">GitHub</span></a><p class="v5-copied" role="status" aria-live="polite"></p></div>
+<div class="v5-scrim" id="v5-scrim" hidden></div>
+<div class="v5-ctc" id="v5-contacto" role="dialog" aria-labelledby="v5-ctc-t" tabindex="-1" hidden>
+  <div class="v5-grab" aria-hidden="true"></div>
+  <div class="v5-top"><span class="v5-k" id="v5-ctc-t">Contact</span><button class="v5-x" type="button" data-v5-cerrar aria-label="Close the contact panel"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button></div>
+  <div class="v5-ctc-mail"><a class="v5-mail" href="mailto:pjfrati@gmail.com" data-v5-mail data-v5-copiar>pjfrati@gmail.com</a><button class="v5-cp" type="button" data-v5-copiar aria-label="Copy email"><svg class="v5-cp-a" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5v-2a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2"/></svg><svg class="v5-cp-b" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg><span class="v5-cp-t">Copied</span></button></div>
+  <p class="v5-copied" role="status" aria-live="polite"></p>
+  <p class="v5-busco">Available for remote work as a Product Designer, UX/UI Designer or UX Lead.</p>
+  <ul class="v5-redes" aria-label="Social links"><li><a class="v5-red" href="https://www.linkedin.com/in/pablofrati/" target="_blank" rel="noopener"><span class="v5-rn"><svg class="v5-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 3.5h7v7M12.5 3.5l-9 9"/></svg></a></li><li><a class="v5-red" href="https://github.com/ElFrato" target="_blank" rel="noopener"><span class="v5-rn"><svg class="v5-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 3.5h7v7M12.5 3.5l-9 9"/></svg></a></li></ul>
+  <a class="v5-red v5-cv" href="../Pablo-Frati-CV-EN.pdf" target="_blank" rel="noopener"><span class="v5-rn"><svg class="v5-ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 1.75h5l3.25 3.25v9.25H4z"/><path d="M9 1.75V5h3.25"/><path d="M6.25 8.5h3.5M6.25 11h3.5"/></svg>CV (PDF)</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 3.5h7v7M12.5 3.5l-9 9"/></svg></a>
+</div>
+<main id="top" class="so">
+<section class="sobre" aria-labelledby="yo-t">
+  <div class="yo-top">
+    <div class="yo-yo"><div class="yo-foto" id="yo-foto"><span class="flip"><span class="cara frente" aria-hidden="true"><img src="../img/frato-avatar.jpg" alt="" width="400" height="400"></span><span class="cara dorso"><img src="../img/pablo-frati-foto.webp" alt="Pablo Frati" width="520" height="520"></span></span></div>
+      <div class="yo-nm"><h1 id="yo-t">Pablo Frati</h1></div>
+      <script>(function () { if (matchMedia('(prefers-reduced-motion: reduce)').matches) return; document.getElementById('yo-foto').classList.add('mascara'); var nm = document.querySelector('.yo-nm'), n = document.createElement('span'); n.className = 'yo-n'; n.setAttribute('aria-hidden', 'true'); n.textContent = 'Frato'; nm.appendChild(n); nm.classList.add('mezcla'); })();</script></div>
+    <div class="yo-pr"><p class="sec-k">About me</p>
+      <p class="yo-q">I live in Buenos Aires and have designed products at fintech and <span class="nw">e-commerce</span> startups since 2022. Before designing, I audit the product and the code, write down every decision with its reasoning, and take the design all the way to production by building the frontend with AI agents.</p></div>
+  </div>
+</section>
+<div class="line" id="line" aria-label="Timeline">
+    <svg class="tl" aria-hidden="true"><path class="ghost" id="tlg"/><path id="tlp" pathLength="1"/></svg>
+    <ol>
+      <li style="--dy:96px"><span class="dot"></span><div class="y">2021</div><div class="t">Mentorship</div><div class="d">I started in UX/UI design.</div></li>
+      <li style="--dy:52px"><span class="dot"></span><div class="y">2022 – 2025</div><div class="t">Paydece</div><div class="d">P2P fintech: my first product job.</div></li>
+      <li style="--dy:74px"><span class="dot"></span><div class="y">May – August 2026</div><div class="t">A chain of orthopedic stores</div><div class="d">I designed their management system and, for the first time, I also built it.</div></li>
+      <li class="now" style="--dy:18px"><span class="dot"></span><div class="y">June 2026 – present</div><div class="t">Liberty</div><div class="d">E-commerce: I lead design and take it to production with AI agents.</div></li>
+    </ol>
+</div>
+
+<section class="bl" aria-labelledby="ex-t">
+  <p class="sec-k" id="ex-t">Experience</p>
+  <article class="tr">
+    <div class="tr-a"><p class="tr-y">Jun 2026 – Present · Remote</p><h2 class="tr-t">Liberty Club</h2><p class="tr-r">UX Lead</p><p class="tr-c">Commission-free e-commerce, with payments in pesos and on blockchain</p>
+      <p class="tr-d">I lead the design of the entire product: from sign-up and subscription plans to store building and checkout. Every redesign starts with research and a benchmark of how competitors solve it, and ends in production: I organize deliveries in Linear with the development team, build the frontend with AI agents and cover QA with automated and manual tests. With the dashboard, Liberty started working with a design system and its own visual identity.</p></div>
+    <div class="tr-b"><ul class="cards"><li><a class="cs" href="caso-panel.html" target="_blank" rel="noopener"><img src="../img/hero-panel-proto.webp" alt="" width="640" height="400" loading="lazy"><span class="cs-b"><span class="cs-t">Seller dashboard</span><span class="cs-k">The 18 management screens in a single dashboard, in production in 10 days.</span><span class="cs-go">See the case study <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 3.5h7v7M12.5 3.5l-9 9"/></svg></span></span></a></li><li><a class="cs" href="caso-checkout.html" target="_blank" rel="noopener"><img src="../img/hero-checkout.webp" alt="" width="640" height="400" loading="lazy"><span class="cs-b"><span class="cs-t">Checkout</span><span class="cs-k">Mobile first, with five different payment methods.</span><span class="cs-go">See the case study <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 3.5h7v7M12.5 3.5l-9 9"/></svg></span></span></a></li></ul></div>
+  </article>
+  <article class="tr">
+    <div class="tr-a"><p class="tr-y">Oct 2022 – Aug 2025 · Remote</p><h2 class="tr-t">Paydece</h2><p class="tr-r">UX/UI Designer</p><p class="tr-c">P2P fintech platform on blockchain</p>
+      <p class="tr-d">I designed the entire platform, and this is where I went all in on user experience: I proposed and designed Communities, redesigned ad posting into 4 steps, co-developed an SDK version of the platform with the PO, and was the product counterpart to an agency on the design system, leading the visual QA of more than 70 components.</p></div>
+    <div class="tr-b"><dl class="st"><div><dt>+1,433%</dt><dd>in traded volume (USD 1.5M → 23M)</dd></div><div><dt>+1,300%</dt><dd>in users (500 → 7,000+)</dd></div></dl>
+      <p class="st-k">Between May 2023 and April 2025.</p>
+      <ul class="cards"><li><a class="cs" href="caso-paydece.html" target="_blank" rel="noopener"><img src="../img/hero-paydece.webp" alt="" width="640" height="400" loading="lazy"><span class="cs-b"><span class="cs-t">The P2P flow</span><span class="cs-k">The trade, step by step and with chat.</span><span class="cs-go">See the case study <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 3.5h7v7M12.5 3.5l-9 9"/></svg></span></span></a></li><li><a class="cs" href="caso-paydece.html" target="_blank" rel="noopener"><img src="../img/caso-paydece/comunidades.webp" alt="" width="640" height="400" loading="lazy"><span class="cs-b"><span class="cs-t">Communities</span><span class="cs-k">In six months they brought in more than 3,300 new users and close to 30% of the financial growth.</span><span class="cs-go">See the case study <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 3.5h7v7M12.5 3.5l-9 9"/></svg></span></span></a></li></ul></div>
+  </article>
+</section>
+
+<section class="bl" aria-labelledby="pr-t">
+  <p class="sec-k" id="pr-t">Projects</p>
+  <article class="tr">
+    <div class="tr-a"><p class="tr-y">May 2026 – Aug 2026</p><h2 class="tr-t">Management system for a chain of orthopedic stores</h2>
+      <p class="tr-d">I started out helping organize the orthopedic store's warehouse and realized there was a lot to improve, with tools and processes that could be almost fully automated. When we talked about it, they showed me some software and gave me "the keys" to make it work, along with the freedom to rebuild it from scratch if I thought it was necessary. And that's what I did.</p>
+      <p class="tr-d">I led the redesign of the management system for a chain of 3 stores and a warehouse, at a company with no technology experience.</p></div>
+    <div class="tr-b">
+      <ul class="cards uno"><li><a class="cs" href="caso-ortopedia.html" target="_blank" rel="noopener"><img src="../img/caso-ortopedia/inicio.webp" alt="" width="1600" height="711" loading="lazy"><span class="cs-b"><span class="cs-t">Orthopedic store</span><span class="cs-k">I built the complete new system with AI agents, from frontend to database, and validated it with 273 automated tests.</span><span class="cs-go">See the case study <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 3.5h7v7M12.5 3.5l-9 9"/></svg></span></span></a></li></ul></div>
+  </article>
+</section>
+
+<section class="bl bl-3" aria-label="Skills, tools, education and languages">
+  <div><p class="sec-k">Skills</p><p class="sk">Product design leadership, UX audit and benchmarking, information architecture and flows, prototyping and interaction design, design systems, UX writing, mobile-first and accessible design, frontend development with AI agents, QA with automated and manual tests</p></div>
+  <div><p class="sec-k">Tools</p><p class="sk">Figma, Claude Code, Cursor, React, TypeScript, Playwright, GitHub, Linear, Notion and ClickUp</p></div>
+  <div><p class="sec-k">Education</p><p class="sk"><b>UX/UI Design</b> · Coderhouse · 2022<br><b>Mentorship with a senior designer</b> · 2021</p>
+    <p class="sec-k sk-2">Languages</p><p class="sk">Spanish: native · English: intermediate (reading and writing)</p></div>
+</section>
+</main>
+<footer class="v5-pie" id="contacto" aria-labelledby="v5-pie-t">
+  <div class="v5-pie-a">
+    <p class="v5-k">Contact</p>
+    <h2 class="v5-pie-t" id="v5-pie-t">Let's talk.</h2>
+    <p class="v5-busco">Available for remote work as a Product Designer, UX/UI Designer or UX Lead.</p>
+  </div>
+  <div class="v5-pie-b">
+    <div class="v5-pie-mail"><a class="v5-mail" href="mailto:pjfrati@gmail.com" data-v5-mail>pjfrati@gmail.com</a><button class="v5-btn" type="button" data-v5-copiar>Copy</button></div>
+    <p class="v5-copied" role="status" aria-live="polite"></p>
+    <ul class="v5-redes" aria-label="Social links"><li class="v5-red-mail"><a class="v5-red" href="mailto:pjfrati@gmail.com" data-v5-copiar aria-label="Copy email: pjfrati@gmail.com"><span class="v5-rn"><svg class="v5-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg><span data-v5-mail>pjfrati@gmail.com</span></span><span class="v5-cp" aria-hidden="true"><svg class="v5-cp-a" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5v-2a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2"/></svg><svg class="v5-cp-b" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg><span class="v5-cp-t">Copied</span></span></a></li><li><a class="v5-red" href="https://www.linkedin.com/in/pablofrati/" target="_blank" rel="noopener"><span class="v5-rn"><svg class="v5-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 3.5h7v7M12.5 3.5l-9 9"/></svg></a></li><li><a class="v5-red" href="https://github.com/ElFrato" target="_blank" rel="noopener"><span class="v5-rn"><svg class="v5-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 3.5h7v7M12.5 3.5l-9 9"/></svg></a></li></ul>
+    <a class="v5-red v5-cv" href="../Pablo-Frati-CV-EN.pdf" target="_blank" rel="noopener"><span class="v5-rn"><svg class="v5-ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 1.75h5l3.25 3.25v9.25H4z"/><path d="M9 1.75V5h3.25"/><path d="M6.25 8.5h3.5M6.25 11h3.5"/></svg>CV (PDF)</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 3.5h7v7M12.5 3.5l-9 9"/></svg></a>
+  </div>
+  <p class="v5-legal">Pablo Frati · Buenos Aires · 2026</p>
+</footer>
+<script>
+function pfClock(ms, fn) { var t0 = 0; function f(now) { if (!t0) t0 = now; var t = Math.min(1, (now - t0) / ms); fn(t); if (t < 1) requestAnimationFrame(f); } requestAnimationFrame(f); }
+(function () {
+  var pic = document.getElementById('yo-foto'); if (!pic || !pic.classList.contains('mascara')) return;
+  var flip = pic.querySelector('.flip'), ims = pic.querySelectorAll('img'), nm = document.querySelector('.yo-nm'), n = nm && nm.querySelector('.yo-n'), listo = false;
+  var CARAS = 5, VP = 0.75, TA = 600, ESPERA = 150, PASO = 40, CUADRO = 40, CIERRE = 500;
+  var A81 = 1260, CD = 3400;
+  function bz(x) {
+    var lo = 0, hi = 1, s, i;
+    for (i = 0; i < 40; i++) { s = (lo + hi) / 2; if (3 * (1 - s) * (1 - s) * s * 0.25 + 3 * (1 - s) * s * s * 0.3 + s * s * s < x) lo = s; else hi = s; }
+    s = (lo + hi) / 2; return 3 * (1 - s) * (1 - s) * s * 0.6 + 3 * (1 - s) * s * s + s * s * s;
+  }
+  function vieja(t) { return A81 * bz(Math.min(1, Math.max(0, t / CD))); }
+  var ts = 0; while (ts < CD && vieja(ts + 1) - vieja(ts) > VP) ts += 5;
+  var A = 180 * CARAS, AF = A81 - vieja(ts), SUB = VP * TA / 2, MES = Math.max(0, (A - SUB - AF) / VP), T = TA + MES + CD - ts;
+  function angulo(t) {
+    if (t < TA) return VP / 2 * (t - TA / Math.PI * Math.sin(Math.PI * t / TA));
+    if (t < TA + MES) return SUB + VP * (t - TA);
+    return A - AF + (vieja(ts + t - TA - MES) - vieja(ts));
+  }
+  function giro(a) { return 'rotate(-2deg) rotateY(' + a.toFixed(2) + 'deg)'; }
+  var SIGNOS = { M: 'BEFKLPRSTZ', m: 'abcdeghknopqsuvz', f: 'fijlrt1' }, mezclaT = 0;
+  function azar(c) { var s = /[A-Z]/.test(c) ? SIGNOS.M : /[fijlrt]/.test(c) ? SIGNOS.f : SIGNOS.m; return s[Math.floor(Math.random() * s.length)]; }
+  function mezclar(texto, dur) {
+    return new Promise(function (listo) {
+      if (!n) return listo();
+      var cuadros = Math.max(3, Math.round(dur / CUADRO)), i = 0, m = texto.length;
+      mezclaT = setInterval(function () {
+        i++;
+        var out = '';
+        for (var k = 0; k < m; k++) out += texto[k] === ' ' || i >= Math.round((k + 1) * cuadros / m) ? texto[k] : azar(texto[k]);
+        n.textContent = out;
+        if (i >= cuadros) { clearInterval(mezclaT); n.textContent = texto; listo(); }
+      }, CUADRO);
+    });
+  }
+  function quieto() { clearInterval(mezclaT); if (n) n.remove(); if (nm) nm.classList.remove('mezcla'); }
+  function cargada(im) { return (im.decode ? im.decode() : Promise.resolve()).then(function () { return true; }, function () { return im.complete && im.naturalWidth > 0; }); }
+  function girar() {
+    if (listo || document.hidden) return;
+    listo = true; document.removeEventListener('visibilitychange', girar);
+    setTimeout(function () {
+      flip.style.transform = giro(A);
+      if (!flip.animate) { quieto(); return; }
+      var cuadros = [], cambios = [], k = 0, t;
+      for (t = 0; t < T; t += PASO) cuadros.push({ offset: t / T, transform: giro(angulo(t)) });
+      cuadros.push({ offset: 1, transform: giro(A) });
+      for (t = 0; t <= T; t += 5) if (angulo(t) >= 90 + 180 * k) { cambios.push(t); k++; }
+      var an = flip.animate(cuadros, { duration: T, easing: 'linear' }), nombre = null;
+      (function mirar() {
+        if ((an.currentTime || 0) < cambios[0]) { requestAnimationFrame(mirar); return; }
+        nombre = mezclar('Pablo Frati', cambios[cambios.length - 1] - cambios[0] + CIERRE);
+      })();
+      an.finished.then(function () { return nombre; }, function () {}).then(quieto, quieto);
+    }, ESPERA);
+  }
+  Promise.all([cargada(ims[0]), cargada(ims[1])]).then(function (ok) {
+    if (!ok[1]) { quieto(); return; }
+    if (!ok[0]) { pic.classList.remove('mascara'); quieto(); return; }
+    document.addEventListener('visibilitychange', girar); girar();
+  });
+})();
+(function () {
+  var line = document.getElementById('line'); if (!line) return;
+  var p = document.getElementById('tlp'), g = document.getElementById('tlg'), lis = [].slice.call(line.querySelectorAll('li'));
+  var narrow = matchMedia('(max-width: 860px)'), reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  var DUR = 3600, fr = [], cur = reduce.matches ? 1 : 0, empezo = false;
+  function wob(i) { return [(i * 37) % 11 - 5, (i * 53) % 13 - 6]; }
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function build() {
+    var L = line.getBoundingClientRect(), pts = [];
+    lis.forEach(function (li) { var d = li.querySelector('.dot').getBoundingClientRect(); pts.push([d.left + d.width / 2 - L.left, d.top + d.height / 2 - L.top]); });
+    var all = [], i;
+    if (!narrow.matches) {
+      all.push([pts[0][0] - 2, pts[0][1] + 18]);
+      for (i = 0; i < pts.length; i++) {
+        all.push(pts[i]);
+        var nx = i < pts.length - 1 ? pts[i + 1] : [L.width, pts[i][1] - 16];
+        var w = wob(i);
+        all.push([lerp(pts[i][0], nx[0], .33), lerp(pts[i][1], nx[1], .33) + 16 + w[0]]);
+        all.push([lerp(pts[i][0], nx[0], .66), lerp(pts[i][1], nx[1], .66) - 12 + w[1]]);
+        if (i === pts.length - 1) all.push(nx);
+      }
+    } else {
+      all.push([pts[0][0], pts[0][1] - 20]);
+      for (i = 0; i < pts.length; i++) {
+        all.push(pts[i]);
+        var ny = i < pts.length - 1 ? pts[i + 1] : [pts[i][0] - 8, L.height];
+        all.push([lerp(pts[i][0], ny[0], .5) + (i % 2 ? -12 : 12), lerp(pts[i][1], ny[1], .5)]);
+        if (i === pts.length - 1) all.push(ny);
+      }
+    }
+    var d = 'M' + all[0][0].toFixed(1) + ' ' + all[0][1].toFixed(1);
+    for (i = 0; i < all.length - 1; i++) {
+      var p0 = all[Math.max(0, i - 1)], p1 = all[i], p2 = all[i + 1], p3 = all[Math.min(all.length - 1, i + 2)];
+      d += ' C' + (p1[0] + (p2[0] - p0[0]) / 6).toFixed(1) + ' ' + (p1[1] + (p2[1] - p0[1]) / 6).toFixed(1) + ' ' + (p2[0] - (p3[0] - p1[0]) / 6).toFixed(1) + ' ' + (p2[1] - (p3[1] - p1[1]) / 6).toFixed(1) + ' ' + p2[0].toFixed(1) + ' ' + p2[1].toFixed(1);
+    }
+    p.setAttribute('d', d); g.setAttribute('d', d);
+    g.setAttribute('transform', 'translate(2.5 2)');
+    var tot = p.getTotalLength(); fr = [];
+    pts.forEach(function (pt) {
+      var best = 0, bd = 1e9;
+      for (var s = 0; s <= 200; s++) { var q = p.getPointAtLength(tot * s / 200), dd = (q.x - pt[0]) * (q.x - pt[0]) + (q.y - pt[1]) * (q.y - pt[1]); if (dd < bd) { bd = dd; best = s / 200; } }
+      fr.push(best);
+    });
+    p.style.strokeDasharray = '1'; g.style.strokeDasharray = '';
+    paint();
+  }
+  function paint() {
+    p.style.strokeDashoffset = (1 - cur).toFixed(4);
+    lis.forEach(function (li, i) { var a = i === 0 ? 1 : Math.max(0, Math.min(1, (cur - fr[i] + 0.03) / 0.07)); li.style.setProperty('--a', a.toFixed(3)); });
+  }
+  function empezar() {
+    if (empezo) return; empezo = true;
+    if (reduce.matches) { cur = 1; paint(); return; }
+    setTimeout(function () { pfClock(DUR, function (t) { cur = (1 - Math.cos(Math.PI * t)) / 2; paint(); }); }, 250);
+  }
+  build();
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (es, io) {
+    if (es[es.length - 1].isIntersecting) { io.disconnect(); empezar(); }
+  }, { threshold: 0.3 }).observe(line);
+  else { cur = 1; paint(); }
+  addEventListener('resize', build);
+  addEventListener('load', build);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(build);
+})();
+(function () {
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var trs = [].slice.call(document.querySelectorAll('.tr'));
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.remove('pre'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  trs.forEach(function (t) { if (t.getBoundingClientRect().top > innerHeight) { t.classList.add('pre'); io.observe(t); } });
+})();
+</script>
+<script src="comun/v5.js" defer></script>
+<script src="../comun/fondo.js" defer></script>
+</body>
+</html>

@@ -76,8 +76,8 @@
   addEventListener('pageshow', poner);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(poner);
 })(window);</script>
-<title>Paydece · Pablo Frati</title>
-<meta name="description" content="Paydece, a P2P fintech platform on blockchain (2022–2025). I designed the entire platform so that trading on blockchain feels trustworthy.">
+<title>Paydece: designing a P2P fintech platform · Pablo Frati</title>
+<meta name="description" content="UX/UI case study: Paydece, a P2P fintech platform on blockchain (2022–2025). I designed the entire platform so that trading on it feels trustworthy.">
 <link rel="canonical" href="https://pablofrati.com/en/caso-paydece.html">
 <link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-paydece.html">
 <link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-paydece.html">
@@ -85,8 +85,8 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Pablo Frati">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Paydece · Pablo Frati">
-<meta property="og:description" content="Paydece, a P2P fintech platform on blockchain (2022–2025). I designed the entire platform so that trading on blockchain feels trustworthy.">
+<meta property="og:title" content="Paydece: designing a P2P fintech platform · Pablo Frati">
+<meta property="og:description" content="UX/UI case study: Paydece, a P2P fintech platform on blockchain (2022–2025). I designed the entire platform so that trading on it feels trustworthy.">
 <meta property="og:url" content="https://pablofrati.com/en/caso-paydece.html">
 <meta property="og:image" content="https://pablofrati.com/img/og/en/caso-paydece.png">
 <meta property="og:image:type" content="image/png">
@@ -94,10 +94,50 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="“I designed the entire platform so that trading on blockchain feels trustworthy.” Next to it, Paydece: the P2P purchase with the trade chat.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Paydece · Pablo Frati">
-<meta name="twitter:description" content="Paydece, a P2P fintech platform on blockchain (2022–2025). I designed the entire platform so that trading on blockchain feels trustworthy.">
+<meta name="twitter:title" content="Paydece: designing a P2P fintech platform · Pablo Frati">
+<meta name="twitter:description" content="UX/UI case study: Paydece, a P2P fintech platform on blockchain (2022–2025). I designed the entire platform so that trading on it feels trustworthy.">
 <meta name="twitter:image" content="https://pablofrati.com/img/og/en/caso-paydece.png">
 <meta name="twitter:image:alt" content="“I designed the entire platform so that trading on blockchain feels trustworthy.” Next to it, Paydece: the P2P purchase with the trade chat.">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "CreativeWork",
+   "@id": "https://pablofrati.com/en/caso-paydece.html#caso",
+   "url": "https://pablofrati.com/en/caso-paydece.html",
+   "name": "Paydece: designing a P2P fintech platform",
+   "description": "UX/UI case study: Paydece, a P2P fintech platform on blockchain (2022–2025). I designed the entire platform so that trading on it feels trustworthy.",
+   "image": "https://pablofrati.com/img/og/en/caso-paydece.png",
+   "author": {
+    "@type": "Person",
+    "@id": "https://pablofrati.com/#pablo",
+    "name": "Pablo Frati"
+   },
+   "inLanguage": "en",
+   "dateModified": "2026-10-27"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pablofrati.com/en/caso-paydece.html#migas",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pablofrati.com/en/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Paydece",
+     "item": "https://pablofrati.com/en/caso-paydece.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
 <script>try { if (!matchMedia('(prefers-reduced-motion: reduce), (max-height: 500px), (max-width: 860px)').matches) document.documentElement.classList.add('story'); } catch (e) {}
 (function (R) { var cel = false, rm = false; try { cel = matchMedia('(max-width: 860px)').matches; rm = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
   if (cel) R.classList.add('cel'); window.__pfGiro = 'propio'; if (cel && rm) return;
@@ -863,14 +903,14 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
             <h2>The P2P flow: posting an ad.</h2>
             <p class="d">I improved the ad-posting experience to guide newcomers without getting in the way of experienced users.</p>
             <div class="pic flow">
-              <figure class="old"><figcaption>before · one form</figcaption><div class="p-card" data-visor data-visor-group="flujo"><img src="../img/caso-paydece/creacion-anterior.webp" width="1000" height="647" fetchpriority="high" alt="The previous flow: a single form to create the order."></div></figure>
+              <figure class="old"><figcaption>before · one form</figcaption><div class="p-card" data-visor data-visor-group="flujo"><img src="../img/caso-paydece/creacion-anterior.webp" width="1000" height="647" fetchpriority="high" alt="Paydece, before: a single form to create the ad"></div></figure>
               <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="becomes"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
               <figure class="new"><figcaption><span class="pd-ya">before · one form <span aria-hidden="true">→</span> </span>after · four steps</figcaption>
                 <div class="steps">
-                  <div class="p-card" style="--k:0" data-visor data-visor-group="flujo"><img src="../img/caso-paydece/paso-1.webp" width="800" height="389" fetchpriority="high" alt="Step 1 of 4: choose between a buy ad and a sell ad."></div>
-                  <div class="p-card" style="--k:1" data-visor data-visor-group="flujo"><img src="../img/caso-paydece/paso-2.webp" width="800" height="389" alt="Step 2 of 4: network, cryptocurrency, currency and payment methods."></div>
-                  <div class="p-card" style="--k:2" data-visor data-visor-group="flujo"><img src="../img/caso-paydece/paso-3.webp" width="800" height="389" alt="Step 3 of 4: available amount, price and offer limits."></div>
-                  <div class="p-card" style="--k:3" data-visor data-visor-group="flujo"><img src="../img/caso-paydece/paso-4.webp" width="800" height="389" alt="Step 4 of 4: a preview of the details before posting."></div>
+                  <div class="p-card" style="--k:0" data-visor data-visor-group="flujo"><img src="../img/caso-paydece/paso-1.webp" width="800" height="389" fetchpriority="high" alt="Paydece, posting an ad, step 1 of 4: choose between a buy ad and a sell ad"></div>
+                  <div class="p-card" style="--k:1" data-visor data-visor-group="flujo"><img src="../img/caso-paydece/paso-2.webp" width="800" height="389" alt="Paydece, posting an ad, step 2 of 4: the network, the digital asset, the currency and the payment methods"></div>
+                  <div class="p-card" style="--k:2" data-visor data-visor-group="flujo"><img src="../img/caso-paydece/paso-3.webp" width="800" height="389" alt="Paydece, posting an ad, step 3 of 4: the available amount, the price and the offer limits"></div>
+                  <div class="p-card" style="--k:3" data-visor data-visor-group="flujo"><img src="../img/caso-paydece/paso-4.webp" width="800" height="389" alt="Paydece, posting an ad, step 4 of 4: the preview before posting"></div>
                 </div>
               </figure>
             </div>
@@ -881,7 +921,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
           <div class="up">
             <h2>Communities.</h2>
             <p class="d">I proposed and designed them: groups with their own identity and reputation, for trading with people you know. It was the feature that brought in the most users.</p>
-            <div class="pic p-card" style="aspect-ratio:900/583" data-visor><img src="../img/caso-paydece/comunidades.webp" width="900" height="583" alt="The community finder: each one on a card with its description, its social links, how many members it has and how much it has traded."></div>
+            <div class="pic p-card" style="aspect-ratio:900/583" data-visor><img src="../img/caso-paydece/comunidades.webp" width="900" height="583" alt="Paydece: the community finder, each one on a card with its description, social links, members and how much it has traded"></div>
           </div>
         </li>
         <li class="mj" data-n="3300"><div><small>July to December 2023</small><b>more than <i>3,300</i> new users</b><span>and close to 30% of the financial growth (USD 1.8M)</span></div></li>
@@ -889,7 +929,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
           <div class="up">
             <h2>Ad management.</h2>
             <p class="d">Every ad, active or paused, with its history in view: more control for those who post every day.</p>
-            <div class="pic p-card" style="aspect-ratio:800/578" data-visor><img src="../img/caso-paydece/anuncios.webp" width="800" height="578" loading="lazy" alt="My ads, sorted by status."></div>
+            <div class="pic p-card" style="aspect-ratio:800/578" data-visor><img src="../img/caso-paydece/anuncios.webp" width="800" height="578" loading="lazy" alt="Paydece: the My ads screen, with every ad sorted by status"></div>
           </div>
         </li>
         <li class="mj" data-n="6000" data-s="1"><div><small>May 2024</small><b><i>6,000</i> users</b><span>USD 7.47M traded</span></div></li>
@@ -897,14 +937,14 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
           <div class="up">
             <h2>P2P as an SDK.</h2>
             <p class="d">The entire platform in 900 × 600 px and unbranded, so other platforms can add it to their own.</p>
-            <div class="pic p-card" style="aspect-ratio:800/527" data-visor><img src="../img/caso-paydece/sdk.webp" width="800" height="527" loading="lazy" alt="The P2P platform as an SDK."></div>
+            <div class="pic p-card" style="aspect-ratio:800/527" data-visor><img src="../img/caso-paydece/sdk.webp" width="800" height="527" loading="lazy" alt="Paydece: the P2P platform as an unbranded SDK, to add it to another platform"></div>
           </div>
         </li>
         <li class="st go">
           <div class="up">
             <h2>Point of Cash.</h2>
             <p class="d">Face-to-face exchanges: how to meet up while protecting each person's location.</p>
-            <div class="pic p-card" style="aspect-ratio:800/527" data-visor><img src="../img/caso-paydece/pointofcash.webp" width="800" height="527" loading="lazy" alt="Point of Cash: a map with the meeting points and the list of ads."></div>
+            <div class="pic p-card" style="aspect-ratio:800/527" data-visor><img src="../img/caso-paydece/pointofcash.webp" width="800" height="527" loading="lazy" alt="Paydece, Point of Cash: a map with the meeting points and the list of ads"></div>
           </div>
         </li>
         <li class="mj" data-n="7195" data-s="1"><div><small>April 2025</small><b><i>7,195</i> users</b><span>USD 23M traded</span></div></li>
@@ -978,11 +1018,11 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         </div>
       </div>
       <figure class="v5-blk-fig pd-fig">
-        <div class="c-card pd-dcrop" style="--ca: 640 / 730; --cw: 231.25%; --cl: -126.875%; --ct: -20.55%"><img class="c-img" src="../img/caso-paydece/com-mia.webp" width="1480" height="925" decoding="async" loading="lazy" alt="The “My community” screen: number of members, all-time and monthly volume, the community's social links and the member list with their activity over the last 15 days."></div>
+        <div class="c-card pd-dcrop" style="--ca: 640 / 730; --cw: 231.25%; --cl: -126.875%; --ct: -20.55%"><img class="c-img" src="../img/caso-paydece/com-mia.webp" width="1480" height="925" decoding="async" loading="lazy" alt="Paydece: the “My community” screen, with the members, all-time and monthly volume, social links and each member's activity"></div>
         <figcaption data-amp><span>For the community leader, every member's performance data.</span></figcaption>
       </figure>
       <figure class="pd-fig pd-market">
-        <div class="c-card pd-mk"><img class="c-img" src="../img/caso-paydece/com-market.webp" width="1400" height="322" decoding="async" loading="lazy" alt="The top of the marketplace: a “Best community” card with the link to request to join, and a “Communities: members only” filter."><i style="left: 67.8%; top: 1.9%; width: 31.5%; height: 58.1%"></i><i style="left: 20.6%; top: 70.2%; width: 12.6%; height: 19.9%"></i></div>
+        <div class="c-card pd-mk"><img class="c-img" src="../img/caso-paydece/com-market.webp" width="1400" height="322" decoding="async" loading="lazy" alt="Paydece: the top of the marketplace, with the “Best community” card and the “Communities: members only” filter"><i style="left: 67.8%; top: 1.9%; width: 31.5%; height: 58.1%"></i><i style="left: 20.6%; top: 70.2%; width: 12.6%; height: 19.9%"></i></div>
         <figcaption data-amp><span>In the marketplace: a featured community, with its link to join, and the filter to <b>trade only among members</b>.</span></figcaption>
       </figure>
     </section>

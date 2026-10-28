@@ -76,8 +76,8 @@
   addEventListener('pageshow', poner);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(poner);
 })(window);</script>
-<title>Checkout · Pablo Frati</title>
-<meta name="description" content="The same purchase, before and after. Liberty Club: commission-free e-commerce, five payment methods in pesos and on blockchain. In production in 9 days.">
+<title>Checkout redesign, mobile first · Pablo Frati</title>
+<meta name="description" content="UX case study: the checkout redesign for Liberty Club, a commission-free e-commerce platform. Mobile first, with five payment methods, in production in 9 days.">
 <link rel="canonical" href="https://pablofrati.com/en/caso-checkout.html">
 <link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-checkout.html">
 <link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-checkout.html">
@@ -85,8 +85,8 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Pablo Frati">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Checkout · Pablo Frati">
-<meta property="og:description" content="The same purchase, before and after. Liberty Club: commission-free e-commerce, five payment methods in pesos and on blockchain. In production in 9 days.">
+<meta property="og:title" content="Checkout redesign, mobile first · Pablo Frati">
+<meta property="og:description" content="UX case study: the checkout redesign for Liberty Club, a commission-free e-commerce platform. Mobile first, with five payment methods, in production in 9 days.">
 <meta property="og:url" content="https://pablofrati.com/en/caso-checkout.html">
 <meta property="og:image" content="https://pablofrati.com/img/og/en/caso-checkout.png">
 <meta property="og:image:type" content="image/png">
@@ -94,10 +94,50 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="“The same purchase, before and after.” Next to it, Liberty: the payment step of the checkout.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Checkout · Pablo Frati">
-<meta name="twitter:description" content="The same purchase, before and after. Liberty Club: commission-free e-commerce, five payment methods in pesos and on blockchain. In production in 9 days.">
+<meta name="twitter:title" content="Checkout redesign, mobile first · Pablo Frati">
+<meta name="twitter:description" content="UX case study: the checkout redesign for Liberty Club, a commission-free e-commerce platform. Mobile first, with five payment methods, in production in 9 days.">
 <meta name="twitter:image" content="https://pablofrati.com/img/og/en/caso-checkout.png">
 <meta name="twitter:image:alt" content="“The same purchase, before and after.” Next to it, Liberty: the payment step of the checkout.">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "CreativeWork",
+   "@id": "https://pablofrati.com/en/caso-checkout.html#caso",
+   "url": "https://pablofrati.com/en/caso-checkout.html",
+   "name": "Checkout redesign, mobile first",
+   "description": "UX case study: the checkout redesign for Liberty Club, a commission-free e-commerce platform. Mobile first, with five payment methods, in production in 9 days.",
+   "image": "https://pablofrati.com/img/og/en/caso-checkout.png",
+   "author": {
+    "@type": "Person",
+    "@id": "https://pablofrati.com/#pablo",
+    "name": "Pablo Frati"
+   },
+   "inLanguage": "en",
+   "dateModified": "2026-10-27"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pablofrati.com/en/caso-checkout.html#migas",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pablofrati.com/en/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Checkout",
+     "item": "https://pablofrati.com/en/caso-checkout.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
 <script>try { if (!matchMedia('(prefers-reduced-motion: reduce), (max-height: 500px)').matches) document.documentElement.classList.add('story'); } catch (e) {}
 (function (R) { var cel = false, rm = false; try { cel = matchMedia('(max-width: 860px)').matches; rm = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
   if (cel) R.classList.add('cel'); window.__pfGiro = 'clase'; if (cel && rm) return;
@@ -708,7 +748,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         </dl>
         <p class="v5-open-go v5-bajar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.25" y="1.75" width="7.5" height="12.5" rx="3.75"/><path class="rueda" d="M8 4.75v2"/></svg>Keep scrolling</p>
       </div>
-      <figure class="v5-open-fig"><div class="v5-open-shot"><img src="../img/hero-checkout.webp" width="1440" height="900" fetchpriority="high" decoding="async" alt="Liberty: the payment step of the checkout"></div></figure>
+      <figure class="v5-open-fig"><div class="v5-open-shot"><img src="../img/hero-checkout.webp" width="1440" height="900" fetchpriority="high" decoding="async" alt="Liberty's redesigned checkout: the payment step, with the five payment methods"></div></figure>
     </section>
 
     <section class="v5-start" id="caso" aria-label="The case at a glance">
@@ -760,7 +800,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
           <p class="v5-blk-d">Before, what you'd entered disappeared and, to change it, you had to go back step by step. Now <b>it stays at the top, with “Edit”</b>.</p>
         </div>
         <div class="v5-blk-fig">
-          <figure class="ck-one"><div class="c-card"><picture><source media="(max-width: 860px)" srcset="../img/caso-checkout/d-pasos-cel.webp" width="750" height="572"><img class="c-img" src="../img/caso-checkout/d-pasos.webp" width="615" height="520" data-visor-w="320" loading="lazy" decoding="async" alt="The Payment step: at the top, the chosen shipping on one line with the “Edit” button; below, the list of the five payment methods with the amount for each."></picture></div></figure>
+          <figure class="ck-one"><div class="c-card"><picture><source media="(max-width: 860px)" srcset="../img/caso-checkout/d-pasos-cel.webp" width="750" height="572"><img class="c-img" src="../img/caso-checkout/d-pasos.webp" width="615" height="520" data-visor-w="320" loading="lazy" decoding="async" alt="Liberty checkout, the Payment step: at the top, the chosen shipping with the “Edit” button; below, the five payment methods with the amount for each"></picture></div></figure>
         </div>
       </article>
 
@@ -772,8 +812,8 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         </div>
         <div class="v5-blk-fig">
           <div class="ck-two" data-seg="Two moments of the summary" data-seg-start="0">
-            <figure><div class="c-card"><img class="c-img" src="../img/caso-checkout/d-envio-a.webp" width="372" height="373" loading="lazy" decoding="async" alt="The order summary before choosing shipping: the Shipping line says “To be determined”."></div><figcaption>Shipping not chosen</figcaption></figure>
-            <figure><div class="c-card"><img class="c-img" src="../img/caso-checkout/d-envio-b.webp" width="372" height="373" loading="lazy" decoding="async" alt="The summary with in-store pickup chosen: the Shipping line says “Free”."></div><figcaption>With in-store pickup</figcaption></figure>
+            <figure><div class="c-card"><img class="c-img" src="../img/caso-checkout/d-envio-a.webp" width="372" height="373" loading="lazy" decoding="async" alt="Liberty checkout: the order summary before choosing shipping, with the Shipping line “To be determined”"></div><figcaption>Shipping not chosen</figcaption></figure>
+            <figure><div class="c-card"><img class="c-img" src="../img/caso-checkout/d-envio-b.webp" width="372" height="373" loading="lazy" decoding="async" alt="Liberty checkout: the summary with in-store pickup, with the Shipping line “Free”"></div><figcaption>With in-store pickup</figcaption></figure>
           </div>
         </div>
       </article>
@@ -786,8 +826,8 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         </div>
         <div class="v5-blk-fig">
           <div class="v5-pair ck-res" data-seg="Before and after">
-            <figure class="v5-old"><div class="c-card"><picture><source media="(max-width: 860px)" srcset="../img/caso-checkout/d-res-antes-cel.webp" width="670" height="580"><img class="c-img" src="../img/caso-checkout/d-res-antes.webp" width="610" height="680" data-visor-w="320" loading="lazy" decoding="async" alt="Before, a purchase by transfer: “Purchase Successful!”, and below it “Your receipt has been recorded. The seller will review it and the order will move to Paid once they confirm it.”"></picture></div><figcaption>Before</figcaption></figure>
-            <figure><div class="c-card"><picture><source media="(max-width: 860px)" srcset="../img/caso-checkout/d-res-despues-cel.webp" width="670" height="580"><img class="c-img" src="../img/caso-checkout/d-res-b.webp" width="580" height="524" data-visor-w="320" loading="lazy" decoding="async" alt="After, the same purchase by transfer: “We received your receipt”, with a waiting clock."></picture></div><figcaption>After</figcaption></figure>
+            <figure class="v5-old"><div class="c-card"><picture><source media="(max-width: 860px)" srcset="../img/caso-checkout/d-res-antes-cel.webp" width="670" height="580"><img class="c-img" src="../img/caso-checkout/d-res-antes.webp" width="610" height="680" data-visor-w="320" loading="lazy" decoding="async" alt="Liberty checkout, before: a purchase by transfer that said “Purchase Successful!” before the seller confirmed the payment"></picture></div><figcaption>Before</figcaption></figure>
+            <figure><div class="c-card"><picture><source media="(max-width: 860px)" srcset="../img/caso-checkout/d-res-despues-cel.webp" width="670" height="580"><img class="c-img" src="../img/caso-checkout/d-res-b.webp" width="580" height="524" data-visor-w="320" loading="lazy" decoding="async" alt="Liberty checkout, after: the same purchase by transfer, with “We received your receipt” and a waiting clock"></picture></div><figcaption>After</figcaption></figure>
           </div>
         </div>
       </article>
@@ -800,8 +840,8 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         </div>
         <div class="v5-blk-fig">
           <div class="v5-pair ck-cel" data-seg="Before and after">
-            <figure class="v5-old"><div class="v5-ph" data-visor><img src="../img/caso-checkout/d-cel-antes.webp" width="750" height="1624" loading="lazy" decoding="async" alt="Before, on mobile: the site menu, the store, the products and only then the form."></div><figcaption>Before</figcaption></figure>
-            <figure><div class="v5-ph" data-visor><img src="../img/caso-checkout/d-cel-despues.webp" width="750" height="1624" loading="lazy" decoding="async" alt="After, on mobile: the form at the top and, fixed at the bottom, the bar with “View summary”, the total and the “Continue to shipping” button."></div><figcaption>After</figcaption></figure>
+            <figure class="v5-old"><div class="v5-ph" data-visor><img src="../img/caso-checkout/d-cel-antes.webp" width="750" height="1624" loading="lazy" decoding="async" alt="Liberty checkout on mobile, before: the site menu, the store, the products and only then the form"></div><figcaption>Before</figcaption></figure>
+            <figure><div class="v5-ph" data-visor><img src="../img/caso-checkout/d-cel-despues.webp" width="750" height="1624" loading="lazy" decoding="async" alt="Liberty checkout on mobile, after: the form at the top and a sticky bar at the bottom with “View summary”, the total and “Continue to shipping”"></div><figcaption>After</figcaption></figure>
           </div>
         </div>
       </article>

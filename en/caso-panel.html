@@ -76,8 +76,8 @@
   addEventListener('pageshow', poner);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(poner);
 })(window);</script>
-<title>Seller dashboard · Pablo Frati</title>
-<meta name="description" content="Liberty Club, a commission-free e-commerce platform. I led the redesign of the seller dashboard: 18 screens in 10 days, built with Cursor and Claude Code.">
+<title>Seller dashboard redesign · Pablo Frati</title>
+<meta name="description" content="UX case study: I led the seller dashboard redesign for Liberty Club, a commission-free e-commerce platform. 18 screens, in production in 10 days.">
 <link rel="canonical" href="https://pablofrati.com/en/caso-panel.html">
 <link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-panel.html">
 <link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-panel.html">
@@ -85,8 +85,8 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Pablo Frati">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Seller dashboard · Pablo Frati">
-<meta property="og:description" content="Liberty Club, a commission-free e-commerce platform. I led the redesign of the seller dashboard: 18 screens in 10 days, built with Cursor and Claude Code.">
+<meta property="og:title" content="Seller dashboard redesign · Pablo Frati">
+<meta property="og:description" content="UX case study: I led the seller dashboard redesign for Liberty Club, a commission-free e-commerce platform. 18 screens, in production in 10 days.">
 <meta property="og:url" content="https://pablofrati.com/en/caso-panel.html">
 <meta property="og:image" content="https://pablofrati.com/img/og/en/caso-panel.png">
 <meta property="og:image:type" content="image/png">
@@ -94,10 +94,50 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="“I led the redesign of the seller dashboard.” Next to it, the Products screen of the new dashboard: catalog metrics at the top and the product table.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Seller dashboard · Pablo Frati">
-<meta name="twitter:description" content="Liberty Club, a commission-free e-commerce platform. I led the redesign of the seller dashboard: 18 screens in 10 days, built with Cursor and Claude Code.">
+<meta name="twitter:title" content="Seller dashboard redesign · Pablo Frati">
+<meta name="twitter:description" content="UX case study: I led the seller dashboard redesign for Liberty Club, a commission-free e-commerce platform. 18 screens, in production in 10 days.">
 <meta name="twitter:image" content="https://pablofrati.com/img/og/en/caso-panel.png">
 <meta name="twitter:image:alt" content="“I led the redesign of the seller dashboard.” Next to it, the Products screen of the new dashboard: catalog metrics at the top and the product table.">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "CreativeWork",
+   "@id": "https://pablofrati.com/en/caso-panel.html#caso",
+   "url": "https://pablofrati.com/en/caso-panel.html",
+   "name": "Seller dashboard redesign",
+   "description": "UX case study: I led the seller dashboard redesign for Liberty Club, a commission-free e-commerce platform. 18 screens, in production in 10 days.",
+   "image": "https://pablofrati.com/img/og/en/caso-panel.png",
+   "author": {
+    "@type": "Person",
+    "@id": "https://pablofrati.com/#pablo",
+    "name": "Pablo Frati"
+   },
+   "inLanguage": "en",
+   "dateModified": "2026-10-27"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pablofrati.com/en/caso-panel.html#migas",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pablofrati.com/en/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Seller dashboard",
+     "item": "https://pablofrati.com/en/caso-panel.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
 <script>try { if (!matchMedia('(prefers-reduced-motion: reduce), (max-height: 500px)').matches) document.documentElement.classList.add('story'); } catch (e) {}
 (function (R) { var cel = false, rm = false; try { cel = matchMedia('(max-width: 860px)').matches; rm = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
   if (cel) R.classList.add('cel'); window.__pfGiro = 'recargar'; if (cel && rm) return;
@@ -1286,7 +1326,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
       <p class="v5-open-l">18 screens in 10 days, built with Cursor and Claude Code.</p>
       <p class="v5-open-go v5-bajar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.25" y="1.75" width="7.5" height="12.5" rx="3.75"/><path class="rueda" d="M8 4.75v2"/></svg>Keep scrolling</p>
     </div>
-    <figure class="v5-open-fig"><div class="v5-open-shot"><img src="../img/caso-panel/proto-inicio.webp" width="1440" height="900" fetchpriority="high" decoding="async" alt="The prototype of the seller dashboard's Home screen, with sample data: the “Boutique Vera” store, its sales, the plan, the shortcuts and the products."></div></figure>
+    <figure class="v5-open-fig"><div class="v5-open-shot"><img src="../img/caso-panel/proto-inicio.webp" width="1440" height="900" fetchpriority="high" decoding="async" alt="The prototype of Liberty's seller dashboard Home screen, with sample data: the “Boutique Vera” store, its sales, the plan, the shortcuts and the products"></div></figure>
   </section>
 
   <div class="hero" id="hero">
@@ -1299,7 +1339,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
               <span class="tag">Before</span>
               <div class="win">
                 <div class="canvas">
-                  <img src="../img/antes-inicio.webp" width="2000" height="1118" alt="The previous dashboard: the seller's Home screen inside the site, with the search bar, “My account” and the cart in the top bar, and cards to create the store, verify identity and business, and upload the first product.">
+                  <img src="../img/antes-inicio.webp" width="2000" height="1118" alt="Liberty's previous seller dashboard: the Home screen inside the site, with the search bar, “My account” and the cart at the top, and cards to create the store, verify identity and upload the first product">
                   <span class="mask" aria-hidden="true"></span><span class="mask m3" aria-hidden="true"></span><span class="mask m4" aria-hidden="true"></span><span class="mask m5" aria-hidden="true"></span>
                   <span class="pchev" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M3 4.5 6 7.5 9 4.5"/></svg></span>
                   <span class="pbg" aria-hidden="true"></span>
@@ -1336,7 +1376,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
             </figure>
             <figure class="pn-acel">
               <span class="tag">Before</span>
-              <div class="pn-acel-ph" data-visor><img src="../img/caso-panel/antes-menu-cel.webp" width="750" height="1624" loading="lazy" decoding="async" alt="Before, on mobile: the site menu, with “My account” and the seller options mixed in with Favorites, Notifications and Cart."></div>
+              <div class="pn-acel-ph" data-visor><img src="../img/caso-panel/antes-menu-cel.webp" width="750" height="1624" loading="lazy" decoding="async" alt="Liberty's previous seller dashboard on mobile: the site menu, with “My account” and the seller options mixed in with Favorites, Notifications and Cart"></div>
               <p class="note">Everything hung off the buyer's “My account” menu.</p>
             </figure>
           </div>
@@ -1353,7 +1393,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
             <li class="note" style="--y:644.5"><s>KYC/KYB</s><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="becomes"><path d="M2 6h8M7 3l3 3-3 3"/></svg>Verification</li>
           </ul>
           <figure class="panel" aria-label="The new dashboard's Home screen. The sidebar is a recreation with the real groups, order and names; the content is the Home prototype, in light mode, with sample data.">
-            <div class="pn-content"><picture><source media="(max-width: 720px), (max-width: 1100px) and (max-aspect-ratio: 4/5)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><img src="../img/caso-panel/proto-inicio-claro.webp" width="2880" height="2400" alt="The new dashboard: the Home prototype, with sample data: the store card, sales, the plan, shortcuts to publish a product, edit the storefront, view sales and answer questions, and the product list."></picture></div>
+            <div class="pn-content"><picture><source media="(max-width: 720px), (max-width: 1100px) and (max-aspect-ratio: 4/5)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><img src="../img/caso-panel/proto-inicio-claro.webp" width="2880" height="2400" alt="Liberty's new seller dashboard: the Home prototype, with sample data, the store card, sales, the plan, shortcuts and the product list"></picture></div>
             <div class="pn-side" aria-hidden="true">
               <div class="pn-brand"><img src="../img/logo-panel.webp" width="260" height="47" alt=""></div>
               <ul class="pn-nav">
@@ -1391,7 +1431,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
           </figure>
           <figure class="phone" aria-label="The new dashboard's Home screen on mobile, with the sidebar open. The sidebar is a recreation with the real groups, order and option names at launch (Aug 31); the Home screen behind it is the prototype, in light mode, with sample data.">
             <div class="ph-scr">
-              <div class="ph-img"><img src="../img/caso-panel/proto-inicio-cel.webp" width="780" height="1440" alt="The new dashboard on mobile: the Home prototype, with sample data, with the “New product” button and the store card."><span class="ph-scrim"></span></div>
+              <div class="ph-img"><img src="../img/caso-panel/proto-inicio-cel.webp" width="780" height="1440" alt="Liberty's new seller dashboard on mobile: the Home prototype, with the “New product” button and the store card"><span class="ph-scrim"></span></div>
               <div class="dr" aria-hidden="true">
                 <img class="dr-logo" src="../img/logo-panel.webp" width="260" height="47" alt="">
                 <span class="dr-mk"><svg viewBox="0 0 24 24"><path d="M19 12H5.5M10.5 7 5.5 12l5 5"/></svg><span>Go to marketplace</span></span>
@@ -1626,8 +1666,8 @@ window.__CMP = { P: [
         </div>
         <div class="v5-blk-fig">
           <div class="v5-pair pn-err" data-seg="Before and now">
-            <figure class="v5-old"><div class="c-card"><img class="c-img" src="../img/p6-sin-conexion.webp" width="490" height="281" decoding="async" loading="lazy" alt="With the network down, Sales showed the empty message “You haven't sold anything yet”."></div><figcaption>Before · with the network down</figcaption></figure>
-            <figure class="c-states"><div><div class="c-card"><img class="c-img" src="../img/p4-error.webp" width="718" height="530" decoding="async" loading="lazy" alt="The Products table with an error: “We couldn't load your products” and the Retry button."></div></div><figcaption>Now · prototype, with an error</figcaption></figure>
+            <figure class="v5-old"><div class="c-card"><img class="c-img" src="../img/p6-sin-conexion.webp" width="490" height="281" decoding="async" loading="lazy" alt="Liberty seller dashboard, before: with the network down, Sales showed the empty message “You haven't sold anything yet”"></div><figcaption>Before · with the network down</figcaption></figure>
+            <figure class="c-states"><div><div class="c-card"><img class="c-img" src="../img/p4-error.webp" width="718" height="530" decoding="async" loading="lazy" alt="Liberty seller dashboard, now: the Products table with an error, “We couldn't load your products” and the Retry button"></div></div><figcaption>Now · prototype, with an error</figcaption></figure>
           </div>
         </div>
       </article>
@@ -1656,7 +1696,7 @@ window.__CMP = { P: [
           <p class="v5-blk-d">Liberty had no design system that supported themes. With the dashboard, I gave it its own visual identity that makes them possible, with a light mode by default that conveys order and trust.</p>
         </div>
         <div class="v5-blk-fig">
-          <figure class="pn-modos"><div class="pn-modos-k" aria-hidden="true"><span class="c-lbl">Light</span><span class="c-lbl">Dark</span></div><div class="c-card c-split"><img src="../img/p4-tabla-claro.webp" width="2216" height="940" decoding="async" loading="lazy" alt="The prototype's Products table: the left half, in light mode"><img class="dk" src="../img/p4-tabla-oscuro.webp" width="2216" height="940" decoding="async" loading="lazy" alt="and the right half, in dark mode."></div></figure>
+          <figure class="pn-modos"><div class="pn-modos-k" aria-hidden="true"><span class="c-lbl">Light</span><span class="c-lbl">Dark</span></div><div class="c-card c-split"><img src="../img/p4-tabla-claro.webp" width="2216" height="940" decoding="async" loading="lazy" alt="The Products table of Liberty's seller dashboard: the left half, in light mode"><img class="dk" src="../img/p4-tabla-oscuro.webp" width="2216" height="940" decoding="async" loading="lazy" alt="and the right half, in dark mode"></div></figure>
         </div>
       </article>
     </section>
@@ -1668,7 +1708,7 @@ window.__CMP = { P: [
         <p class="v5-blk-d">The agents built fast, so I set up checks in layers: automated tests check the code, the browser checks the screen, and the comparison with the prototype checks the design. At the end, I review it myself.</p>
       </div>
       <div class="v5-blk-fig pn-rev">
-        <figure class="pn-proto"><p class="c-lbl">Prototype · sample data</p><div class="c-card"><picture><source media="(max-width: 860px)" srcset="../img/caso-panel/proto-metricas-cel.webp" width="856" height="348"><img class="c-img" src="../img/caso-panel/proto-metricas.webp" width="1600" height="488" decoding="async" loading="lazy" alt="The Metrics prototype, with sample data: out-of-stock products, rating, questions and active products, and how much is left to complete the store."></picture></div></figure>
+        <figure class="pn-proto"><p class="c-lbl">Prototype · sample data</p><div class="c-card"><picture><source media="(max-width: 860px)" srcset="../img/caso-panel/proto-metricas-cel.webp" width="856" height="348"><img class="c-img" src="../img/caso-panel/proto-metricas.webp" width="1600" height="488" decoding="async" loading="lazy" alt="The Metrics prototype of Liberty's seller dashboard, with sample data: out-of-stock products, rating, questions, active products and how much is left to complete the store"></picture></div></figure>
         <div class="c-card c-sheet">
           <div class="c-ch">Before it ships, each part goes through:</div>
           <ol>
@@ -1690,8 +1730,8 @@ window.__CMP = { P: [
       </div>
       <div class="v5-blk-fig">
         <div class="v5-pair pn-espera" data-seg="Before and now">
-          <figure class="v5-old"><div class="c-card pn-vid"><img class="c-img" src="../img/caso-panel/antes-espera.webp" width="1280" height="800" decoding="async" loading="lazy" alt="Before: the old dashboard's loading screen, full screen: the Liberty logo on black, “No middlemen” and a loading bar."><video class="pn-loop" src="../img/caso-panel/antes-espera.mp4" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video></div><figcaption>Before · the 3-second wait</figcaption></figure>
-          <figure><div class="c-card pn-sk"><img class="c-img" src="../img/caso-panel/despues-skeletons.webp" width="1280" height="800" decoding="async" loading="lazy" alt="Now: Products while loading, with its sidebar and the shape of the screen in gray blocks: the title, the eight summary cards, the filters and the table rows."><span class="pn-brillo" aria-hidden="true"><i></i></span></div><figcaption>Now · a loading state that previews what's coming</figcaption></figure>
+          <figure class="v5-old"><div class="c-card pn-vid"><img class="c-img" src="../img/caso-panel/antes-espera.webp" width="1280" height="800" decoding="async" loading="lazy" alt="Liberty seller dashboard, before: the full-screen loading screen, with the logo on black, “No middlemen” and a loading bar"><video class="pn-loop" src="../img/caso-panel/antes-espera.mp4" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video></div><figcaption>Before · the 3-second wait</figcaption></figure>
+          <figure><div class="c-card pn-sk"><img class="c-img" src="../img/caso-panel/despues-skeletons.webp" width="1280" height="800" decoding="async" loading="lazy" alt="Liberty seller dashboard, now: Products while loading, with the sidebar and the shape of the screen in gray blocks"><span class="pn-brillo" aria-hidden="true"><i></i></span></div><figcaption>Now · a loading state that previews what's coming</figcaption></figure>
         </div>
         <script>
         (function () {

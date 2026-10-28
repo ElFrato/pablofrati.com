@@ -76,14 +76,14 @@
   addEventListener('pageshow', poner);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(poner);
 })(window);</script>
-<title>El checkout · Pablo Frati</title>
-<meta name="description" content="La misma compra, antes y después. Liberty Club es un e-commerce sin comisiones, con cinco medios de pago en pesos y con blockchain. En producción en 9 días.">
+<title>Rediseño del checkout, mobile first · Pablo Frati</title>
+<meta name="description" content="Caso de estudio: rediseño del checkout de Liberty Club, un e-commerce sin comisiones. Mobile first, con cinco medios de pago y en producción en 9 días.">
 <link rel="canonical" href="https://pablofrati.com/caso-checkout.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Pablo Frati">
 <meta property="og:locale" content="es_AR">
-<meta property="og:title" content="El checkout · Pablo Frati">
-<meta property="og:description" content="La misma compra, antes y después. Liberty Club es un e-commerce sin comisiones, con cinco medios de pago en pesos y con blockchain. En producción en 9 días.">
+<meta property="og:title" content="Rediseño del checkout, mobile first · Pablo Frati">
+<meta property="og:description" content="Caso de estudio: rediseño del checkout de Liberty Club, un e-commerce sin comisiones. Mobile first, con cinco medios de pago y en producción en 9 días.">
 <meta property="og:url" content="https://pablofrati.com/caso-checkout.html">
 <meta property="og:image" content="https://pablofrati.com/img/og/caso-checkout.png">
 <meta property="og:image:type" content="image/png">
@@ -91,10 +91,50 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="«La misma compra, antes y después.» Al lado, Liberty: el paso de pago del checkout.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="El checkout · Pablo Frati">
-<meta name="twitter:description" content="La misma compra, antes y después. Liberty Club es un e-commerce sin comisiones, con cinco medios de pago en pesos y con blockchain. En producción en 9 días.">
+<meta name="twitter:title" content="Rediseño del checkout, mobile first · Pablo Frati">
+<meta name="twitter:description" content="Caso de estudio: rediseño del checkout de Liberty Club, un e-commerce sin comisiones. Mobile first, con cinco medios de pago y en producción en 9 días.">
 <meta name="twitter:image" content="https://pablofrati.com/img/og/caso-checkout.png">
 <meta name="twitter:image:alt" content="«La misma compra, antes y después.» Al lado, Liberty: el paso de pago del checkout.">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "CreativeWork",
+   "@id": "https://pablofrati.com/caso-checkout.html#caso",
+   "url": "https://pablofrati.com/caso-checkout.html",
+   "name": "Rediseño del checkout, mobile first",
+   "description": "Caso de estudio: rediseño del checkout de Liberty Club, un e-commerce sin comisiones. Mobile first, con cinco medios de pago y en producción en 9 días.",
+   "image": "https://pablofrati.com/img/og/caso-checkout.png",
+   "author": {
+    "@type": "Person",
+    "@id": "https://pablofrati.com/#pablo",
+    "name": "Pablo Frati"
+   },
+   "inLanguage": "es-AR",
+   "dateModified": "2026-10-27"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pablofrati.com/caso-checkout.html#migas",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Inicio",
+     "item": "https://pablofrati.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "El checkout",
+     "item": "https://pablofrati.com/caso-checkout.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
 <script>try { if (!matchMedia('(prefers-reduced-motion: reduce), (max-height: 500px)').matches) document.documentElement.classList.add('story'); } catch (e) {}
 (function (R) { var cel = false, rm = false; try { cel = matchMedia('(max-width: 860px)').matches; rm = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
   if (cel) R.classList.add('cel'); window.__pfGiro = 'clase'; if (cel && rm) return;
@@ -705,7 +745,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         </dl>
         <p class="v5-open-go v5-bajar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.25" y="1.75" width="7.5" height="12.5" rx="3.75"/><path class="rueda" d="M8 4.75v2"/></svg>Seguí bajando</p>
       </div>
-      <figure class="v5-open-fig"><div class="v5-open-shot"><img src="img/hero-checkout.webp" width="1440" height="900" fetchpriority="high" decoding="async" alt="Liberty: el paso de pago del checkout"></div></figure>
+      <figure class="v5-open-fig"><div class="v5-open-shot"><img src="img/hero-checkout.webp" width="1440" height="900" fetchpriority="high" decoding="async" alt="El checkout de Liberty, rediseñado: el paso de pago, con los cinco medios de pago"></div></figure>
     </section>
 
     <section class="v5-start" id="caso" aria-label="El caso en corto">
@@ -757,7 +797,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
           <p class="v5-blk-d">Antes, lo cargado dejaba de verse y, para cambiarlo, había que volver paso por paso. Ahora <b>queda arriba, con «Editar»</b>.</p>
         </div>
         <div class="v5-blk-fig">
-          <figure class="ck-one"><div class="c-card"><picture><source media="(max-width: 860px)" srcset="img/caso-checkout/d-pasos-cel.webp" width="750" height="572"><img class="c-img" src="img/caso-checkout/d-pasos.webp" width="615" height="520" data-visor-w="320" loading="lazy" decoding="async" alt="El paso Pago: arriba, el envío ya elegido en una línea con el botón «Editar»; abajo, la lista de los cinco medios de pago con el monto de cada uno."></picture></div></figure>
+          <figure class="ck-one"><div class="c-card"><picture><source media="(max-width: 860px)" srcset="img/caso-checkout/d-pasos-cel.webp" width="750" height="572"><img class="c-img" src="img/caso-checkout/d-pasos.webp" width="615" height="520" data-visor-w="320" loading="lazy" decoding="async" alt="Checkout de Liberty, el paso Pago: arriba, el envío ya elegido con el botón «Editar»; abajo, los cinco medios de pago con el monto de cada uno"></picture></div></figure>
         </div>
       </article>
 
@@ -769,8 +809,8 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         </div>
         <div class="v5-blk-fig">
           <div class="ck-two" data-seg="Dos momentos del resumen" data-seg-start="0">
-            <figure><div class="c-card"><img class="c-img" src="img/caso-checkout/d-envio-a.webp" width="372" height="373" loading="lazy" decoding="async" alt="El resumen de la compra antes de elegir el envío: la línea Envío dice «A definir»."></div><figcaption>Sin elegir el envío</figcaption></figure>
-            <figure><div class="c-card"><img class="c-img" src="img/caso-checkout/d-envio-b.webp" width="372" height="373" loading="lazy" decoding="async" alt="El resumen con retiro en la tienda elegido: la línea Envío dice «Sin cargo»."></div><figcaption>Con retiro en la tienda</figcaption></figure>
+            <figure><div class="c-card"><img class="c-img" src="img/caso-checkout/d-envio-a.webp" width="372" height="373" loading="lazy" decoding="async" alt="Checkout de Liberty: el resumen de la compra antes de elegir el envío, con la línea Envío «A definir»"></div><figcaption>Sin elegir el envío</figcaption></figure>
+            <figure><div class="c-card"><img class="c-img" src="img/caso-checkout/d-envio-b.webp" width="372" height="373" loading="lazy" decoding="async" alt="Checkout de Liberty: el resumen con retiro en la tienda, con la línea Envío «Sin cargo»"></div><figcaption>Con retiro en la tienda</figcaption></figure>
           </div>
         </div>
       </article>
@@ -783,8 +823,8 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         </div>
         <div class="v5-blk-fig">
           <div class="v5-pair ck-res" data-seg="Antes y después">
-            <figure class="v5-old"><div class="c-card"><picture><source media="(max-width: 860px)" srcset="img/caso-checkout/d-res-antes-cel.webp" width="670" height="580"><img class="c-img" src="img/caso-checkout/d-res-antes.webp" width="610" height="680" data-visor-w="320" loading="lazy" decoding="async" alt="Antes, una compra con transferencia: «¡Compra Exitosa!», y debajo «Tu comprobante quedó registrado. El vendedor lo revisa y la orden pasa a Pagada cuando lo confirme.»"></picture></div><figcaption>Antes</figcaption></figure>
-            <figure><div class="c-card"><picture><source media="(max-width: 860px)" srcset="img/caso-checkout/d-res-despues-cel.webp" width="670" height="580"><img class="c-img" src="img/caso-checkout/d-res-b.webp" width="580" height="524" data-visor-w="320" loading="lazy" decoding="async" alt="Después, la misma compra con transferencia: «Recibimos tu comprobante», con un reloj de espera."></picture></div><figcaption>Después</figcaption></figure>
+            <figure class="v5-old"><div class="c-card"><picture><source media="(max-width: 860px)" srcset="img/caso-checkout/d-res-antes-cel.webp" width="670" height="580"><img class="c-img" src="img/caso-checkout/d-res-antes.webp" width="610" height="680" data-visor-w="320" loading="lazy" decoding="async" alt="Checkout de Liberty, antes: una compra con transferencia que decía «¡Compra Exitosa!» antes de que el vendedor confirmara el pago"></picture></div><figcaption>Antes</figcaption></figure>
+            <figure><div class="c-card"><picture><source media="(max-width: 860px)" srcset="img/caso-checkout/d-res-despues-cel.webp" width="670" height="580"><img class="c-img" src="img/caso-checkout/d-res-b.webp" width="580" height="524" data-visor-w="320" loading="lazy" decoding="async" alt="Checkout de Liberty, después: la misma compra con transferencia, con «Recibimos tu comprobante» y un reloj de espera"></picture></div><figcaption>Después</figcaption></figure>
           </div>
         </div>
       </article>
@@ -797,8 +837,8 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         </div>
         <div class="v5-blk-fig">
           <div class="v5-pair ck-cel" data-seg="Antes y después">
-            <figure class="v5-old"><div class="v5-ph" data-visor><img src="img/caso-checkout/d-cel-antes.webp" width="750" height="1624" loading="lazy" decoding="async" alt="Antes, en celular: el menú del sitio, la tienda, los productos y recién después el formulario."></div><figcaption>Antes</figcaption></figure>
-            <figure><div class="v5-ph" data-visor><img src="img/caso-checkout/d-cel-despues.webp" width="750" height="1624" loading="lazy" decoding="async" alt="Después, en celular: el formulario arriba y, fija abajo, la barra con «Ver resumen», el total y el botón «Continuar al envío»."></div><figcaption>Después</figcaption></figure>
+            <figure class="v5-old"><div class="v5-ph" data-visor><img src="img/caso-checkout/d-cel-antes.webp" width="750" height="1624" loading="lazy" decoding="async" alt="Checkout de Liberty en el celular, antes: el menú del sitio, la tienda, los productos y recién después el formulario"></div><figcaption>Antes</figcaption></figure>
+            <figure><div class="v5-ph" data-visor><img src="img/caso-checkout/d-cel-despues.webp" width="750" height="1624" loading="lazy" decoding="async" alt="Checkout de Liberty en el celular, después: el formulario arriba y una barra fija abajo con «Ver resumen», el total y «Continuar al envío»"></div><figcaption>Después</figcaption></figure>
           </div>
         </div>
       </article>

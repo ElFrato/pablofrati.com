@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://pablofrati.com/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/"/>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/frato-avatar.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/hero-paydece.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/proto-inicio.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/hero-checkout.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/hero-ortopedia.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/pablo-frati-foto.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://pablofrati.com/en/</loc>
@@ -13,13 +31,61 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/"/>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/frato-avatar.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/hero-paydece.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/proto-inicio.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/hero-checkout.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/hero-ortopedia.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/pablo-frati-foto.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://pablofrati.com/metodo.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/metodo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/metodo.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/metodo.html"/>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/hero-ortopedia.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p3-v3.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p3-v4.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p3-v4-cel.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-tabla-claro.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-tabla-oscuro.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-cargando.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-vacio.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-error.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/hero-checkout.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://pablofrati.com/en/metodo.html</loc>
@@ -27,13 +93,49 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/metodo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/metodo.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/metodo.html"/>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/hero-ortopedia.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p3-v3.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p3-v4.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p3-v4-cel.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-tabla-claro.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-tabla-oscuro.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-cargando.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-vacio.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-error.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/hero-checkout.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://pablofrati.com/sobre-mi.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/sobre-mi.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/sobre-mi.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/sobre-mi.html"/>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/frato-avatar.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/pablo-frati-foto.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://pablofrati.com/en/sobre-mi.html</loc>
@@ -41,13 +143,58 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/sobre-mi.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/sobre-mi.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/sobre-mi.html"/>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/frato-avatar.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/pablo-frati-foto.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://pablofrati.com/caso-paydece.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-paydece.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-paydece.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-paydece.html"/>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/creacion-anterior.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/paso-1.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/paso-2.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/paso-3.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/paso-4.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/comunidades.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/anuncios.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/sdk.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/pointofcash.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/op-despues-empieza.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/op-antes-empieza.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/com-mia.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/com-market.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://pablofrati.com/en/caso-paydece.html</loc>
@@ -55,13 +202,94 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-paydece.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-paydece.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-paydece.html"/>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/creacion-anterior.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/paso-1.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/paso-2.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/paso-3.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/paso-4.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/comunidades.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/anuncios.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/sdk.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/pointofcash.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/op-despues-empieza.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/op-antes-empieza.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/com-mia.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-paydece/com-market.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://pablofrati.com/caso-panel.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-panel.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-panel.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-panel.html"/>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/proto-inicio.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/antes-inicio.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/antes-menu-cel.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/proto-inicio-claro.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/proto-inicio-cel.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/despues-inicio.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/antes-inicio.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p6-sin-conexion.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-error.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-tabla-claro.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-tabla-oscuro.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/proto-metricas.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/antes-espera.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/despues-skeletons.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://pablofrati.com/en/caso-panel.html</loc>
@@ -69,13 +297,91 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-panel.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-panel.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-panel.html"/>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/proto-inicio.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/antes-inicio.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/antes-menu-cel.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/proto-inicio-claro.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/proto-inicio-cel.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/despues-inicio.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/antes-inicio.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p6-sin-conexion.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-error.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-tabla-claro.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/p4-tabla-oscuro.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/proto-metricas.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/antes-espera.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-panel/despues-skeletons.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://pablofrati.com/caso-checkout.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-checkout.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-checkout.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-checkout.html"/>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/hero-checkout.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/d-pasos.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/d-envio-a.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/d-envio-b.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/d-res-antes.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/d-res-b.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/d-cel-antes.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/d-cel-despues.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/despues-datos.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/antes-datos.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/m-despues-datos.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/m-antes-datos.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://pablofrati.com/en/caso-checkout.html</loc>
@@ -83,13 +389,76 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-checkout.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-checkout.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-checkout.html"/>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/hero-checkout.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/d-pasos.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/d-envio-a.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/d-envio-b.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/d-res-antes.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/d-res-b.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/d-cel-antes.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/d-cel-despues.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/despues-datos.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/antes-datos.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/m-despues-datos.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-checkout/m-antes-datos.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://pablofrati.com/caso-ortopedia.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-ortopedia.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-ortopedia.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-ortopedia.html"/>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/caja.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/inicio.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/cobrar.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/comprobante.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/productos.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/ajuste-2.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/auditoria.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/deposito.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/remito.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://pablofrati.com/en/caso-ortopedia.html</loc>
@@ -97,5 +466,32 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-ortopedia.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-ortopedia.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pablofrati.com/caso-ortopedia.html"/>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/caja.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/inicio.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/cobrar.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/comprobante.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/productos.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/ajuste-2.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/auditoria.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/deposito.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://pablofrati.com/img/caso-ortopedia/remito.webp</image:loc>
+    </image:image>
   </url>
 </urlset>

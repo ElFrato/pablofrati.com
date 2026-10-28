@@ -76,8 +76,8 @@
   addEventListener('pageshow', poner);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(poner);
 })(window);</script>
-<title>Orthopedic store · Pablo Frati</title>
-<meta name="description" content="I designed it and, this time, I also built it. An internal system for a chain of orthopedic stores: stock, cash register and delivery notes between stores.">
+<title>Management system built with AI · Pablo Frati</title>
+<meta name="description" content="UX case study: I designed and built with AI agents a management system for a chain of orthopedic stores, with stock, cash register and delivery notes.">
 <link rel="canonical" href="https://pablofrati.com/en/caso-ortopedia.html">
 <link rel="alternate" hreflang="es" href="https://pablofrati.com/caso-ortopedia.html">
 <link rel="alternate" hreflang="en" href="https://pablofrati.com/en/caso-ortopedia.html">
@@ -85,8 +85,8 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Pablo Frati">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Orthopedic store · Pablo Frati">
-<meta property="og:description" content="I designed it and, this time, I also built it. An internal system for a chain of orthopedic stores: stock, cash register and delivery notes between stores.">
+<meta property="og:title" content="Management system built with AI · Pablo Frati">
+<meta property="og:description" content="UX case study: I designed and built with AI agents a management system for a chain of orthopedic stores, with stock, cash register and delivery notes.">
 <meta property="og:url" content="https://pablofrati.com/en/caso-ortopedia.html">
 <meta property="og:image" content="https://pablofrati.com/img/og/en/caso-ortopedia.png">
 <meta property="og:image:type" content="image/png">
@@ -94,10 +94,50 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="“I designed it and, this time, I also built it.” Next to it, the orthopedic store's management system: the Cash register screen, with the brand and the store blurred.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Orthopedic store · Pablo Frati">
-<meta name="twitter:description" content="I designed it and, this time, I also built it. An internal system for a chain of orthopedic stores: stock, cash register and delivery notes between stores.">
+<meta name="twitter:title" content="Management system built with AI · Pablo Frati">
+<meta name="twitter:description" content="UX case study: I designed and built with AI agents a management system for a chain of orthopedic stores, with stock, cash register and delivery notes.">
 <meta name="twitter:image" content="https://pablofrati.com/img/og/en/caso-ortopedia.png">
 <meta name="twitter:image:alt" content="“I designed it and, this time, I also built it.” Next to it, the orthopedic store's management system: the Cash register screen, with the brand and the store blurred.">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "CreativeWork",
+   "@id": "https://pablofrati.com/en/caso-ortopedia.html#caso",
+   "url": "https://pablofrati.com/en/caso-ortopedia.html",
+   "name": "Management system built with AI",
+   "description": "UX case study: I designed and built with AI agents a management system for a chain of orthopedic stores, with stock, cash register and delivery notes.",
+   "image": "https://pablofrati.com/img/og/en/caso-ortopedia.png",
+   "author": {
+    "@type": "Person",
+    "@id": "https://pablofrati.com/#pablo",
+    "name": "Pablo Frati"
+   },
+   "inLanguage": "en",
+   "dateModified": "2026-10-27"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pablofrati.com/en/caso-ortopedia.html#migas",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pablofrati.com/en/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Orthopedic store",
+     "item": "https://pablofrati.com/en/caso-ortopedia.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
 <script>try { if (!matchMedia('(prefers-reduced-motion: reduce), (max-height: 500px)').matches) document.documentElement.classList.add('story'); } catch (e) {}
 (function (R) { var cel = false, rm = false; try { cel = matchMedia('(max-width: 860px)').matches; rm = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
   if (cel) R.classList.add('cel'); window.__pfGiro = 'propio'; if (cel && rm) return;
@@ -788,7 +828,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         <div class="o-ly" aria-hidden="true"><div class="o-db"><div><b>Stock</b><em></em></div><div><b>Cash register</b><em></em></div><div><b>Receipts</b><em></em></div><div><b>Delivery notes</b><em></em></div><div><b>Products</b><em></em></div><div><b>Suppliers</b><em></em></div></div></div>
         <div class="o-ly" aria-hidden="true"><div class="o-rl"><span>Void a sale</span><u></u><span class="q">Was the money returned?</span><u></u><div class="yn"><span>Yes</span><span>No</span></div></div></div>
         <div class="o-ly" aria-hidden="true"><div class="o-wf"><div class="sb"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="mn"><div class="bx w"></div><div class="bx"></div><div class="bx"></div></div></div></div>
-        <div class="o-ly shot" data-visor><img src="../img/caso-ortopedia/caja.webp" width="1600" height="1000" fetchpriority="high" alt="The system's Cash register screen: product search, cart, customer, total and payment methods."></div>
+        <div class="o-ly shot" data-visor><img src="../img/caso-ortopedia/caja.webp" width="1600" height="1000" fetchpriority="high" alt="Orthopedic store management system: the Cash register screen, with product search, cart, customer, total and payment methods"></div>
       </div></div>
     </div>
   </section>
@@ -817,7 +857,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         <h3 class="v5-blk-t">On sign-in, <em>what needs doing today.</em></h3>
         <p class="v5-blk-d">Each role lands on a different Home screen: the store sells, searches and sees its stock; the warehouse sees what to prepare and which shipments are awaiting confirmation; the office, <b>the sales and cash of every store</b>.</p>
       </div>
-      <figure class="v5-blk-fig or-fig"><div class="c-card"><img class="c-img" src="../img/caso-ortopedia/inicio.webp" width="1600" height="711" loading="lazy" decoding="async" data-visor-w="1280" alt="A store's Home screen: today's sales, cash in the register, delivery notes to confirm and stock alerts; shortcuts to New sale, Find product and My stock; below, the delivery notes received and the low-stock products."></div>
+      <figure class="v5-blk-fig or-fig"><div class="c-card"><img class="c-img" src="../img/caso-ortopedia/inicio.webp" width="1600" height="711" loading="lazy" decoding="async" data-visor-w="1280" alt="Orthopedic store management system: a store's Home screen, with today's sales, cash in the register, delivery notes to confirm and stock alerts"></div>
         <p class="or-amp" data-amp></p></figure>
     </section>
 
@@ -828,9 +868,9 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         <p class="v5-blk-d">You find the product, add it to the sale and confirm, all on one screen. On confirmation, the receipt is issued and the stock is deducted.</p>
       </div>
       <div class="v5-blk-fig or-duo">
-        <figure class="or-fig"><div class="c-card"><img class="c-img" src="../img/caso-ortopedia/cobrar.webp" width="1600" height="1122" loading="lazy" decoding="async" data-visor-w="1280" alt="The Cash register with a sale in progress: register open, two products in the cart, customer, total and cash payment; below, a notice that units not listed in stock are being sold, with a switch to confirm they're there."></div>
+        <figure class="or-fig"><div class="c-card"><img class="c-img" src="../img/caso-ortopedia/cobrar.webp" width="1600" height="1122" loading="lazy" decoding="async" data-visor-w="1280" alt="Orthopedic store management system: the Cash register with a sale in progress and the notice about units not listed in stock"></div>
           <figcaption data-amp><span>If something shows as out of stock, <b>the sale goes on</b>: it's confirmed, the stock is adjusted and the sale is flagged for the office.</span></figcaption></figure>
-        <figure class="or-fig"><div class="c-card"><img class="c-img" src="../img/caso-ortopedia/comprobante.webp" width="760" height="1140" loading="lazy" decoding="async" data-visor-w="620" alt="A receipt's details: the products with their discount, the total and the payment split between credit in installments and cash, with the change and the rounding."></div>
+        <figure class="or-fig"><div class="c-card"><img class="c-img" src="../img/caso-ortopedia/comprobante.webp" width="760" height="1140" loading="lazy" decoding="async" data-visor-w="620" alt="Orthopedic store management system: a receipt's details, with the payment split between credit in installments and cash, the change and the rounding"></div>
           <figcaption data-amp><span>Up to three payment methods. <b>Cash and change are calculated automatically</b> (the change can be edited) and the rounding is recorded.</span></figcaption></figure>
       </div>
     </section>
@@ -841,7 +881,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         <h3 class="v5-blk-t">The price, <em>calculated by the system.</em></h3>
         <p class="v5-blk-d">Before, you had to find the product and check the price by hand. Now you search by name, code, supplier, brand, color or size, <b>with or without accents and capitals</b>.</p>
       </div>
-      <figure class="v5-blk-fig or-fig"><div class="c-card"><img class="c-img" src="../img/caso-ortopedia/productos.webp" width="1600" height="778" loading="lazy" decoding="async" data-visor-w="1280" alt="The product list as a store sees it: a search by code, name, size, brand or supplier; and for each product, the code, the color or size, the final price, the stock in the store and the stock in the other locations. The brand column is blurred."></div>
+      <figure class="v5-blk-fig or-fig"><div class="c-card"><img class="c-img" src="../img/caso-ortopedia/productos.webp" width="1600" height="778" loading="lazy" decoding="async" data-visor-w="1280" alt="Orthopedic store management system: the product list as a store sees it, with the final price and the stock in each location"></div>
         <figcaption data-amp><span>The store sees <b>the final price and the stock in other locations</b>; costs stay hidden. Items in stock show up first.</span></figcaption></figure>
     </section>
 
@@ -851,7 +891,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         <h3 class="v5-blk-t">It speaks the language <em>of the shop floor.</em></h3>
         <p class="v5-blk-d">It would be used by people coming from Excel, in stores where staff rotates. The screens say “Available stock”, every button says what it does, <b>each store signs in with one account</b> and every product comes with its supplier.</p>
       </div>
-      <figure class="v5-blk-fig or-fig or-narrow"><div class="c-card"><img class="c-img" src="../img/caso-ortopedia/ajuste-2.webp" width="760" height="1000" loading="lazy" decoding="async" data-visor-w="620" alt="The panel for adjusting a product's stock: a notice that every movement is recorded, the location, what the system says versus what was counted, the question “How many are there now?” and the reason."></div>
+      <figure class="v5-blk-fig or-fig or-narrow"><div class="c-card"><img class="c-img" src="../img/caso-ortopedia/ajuste-2.webp" width="760" height="1000" loading="lazy" decoding="async" data-visor-w="620" alt="Orthopedic store management system: the panel for adjusting a product's stock, with the question “How many are there now?” and the reason"></div>
         <figcaption data-amp><span>Adjusting stock is a single question: <b>“How many are there now?”</b>. The system works out the difference.</span></figcaption></figure>
     </section>
 
@@ -861,7 +901,7 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
         <h3 class="v5-blk-t">Everything <em>is recorded.</em></h3>
         <p class="v5-blk-d">Every stock movement is logged: what changed, where, how much, why and who. <b>The record is permanent</b>: a manual adjustment requires a reason, and an issued receipt is locked.</p>
       </div>
-      <figure class="v5-blk-fig or-fig"><div class="c-card"><img class="c-img" src="../img/caso-ortopedia/auditoria.webp" width="1600" height="744" loading="lazy" decoding="async" data-visor-w="1280" alt="The stock movement audit trail: one row per movement with date and time, type (sale, sale exception, adjustment, archived product, bulk upload, goods received, delivery note), detail, location, change and person responsible. Stores and people responsible are blurred."></div>
+      <figure class="v5-blk-fig or-fig"><div class="c-card"><img class="c-img" src="../img/caso-ortopedia/auditoria.webp" width="1600" height="744" loading="lazy" decoding="async" data-visor-w="1280" alt="Orthopedic store management system: the stock movement audit trail, one row per movement with date, type, change and person responsible"></div>
         <figcaption data-amp><span>Even an archived product leaves a trace.</span></figcaption></figure>
     </section>
 
@@ -873,8 +913,8 @@ posthog.init('phc_AJzCLvpiFerJTe3f5HhG67beQeB8tg8n2eK763eyubdC', {
       </div>
       <div class="v5-blk-fig">
         <div class="or-stack" data-seg="Warehouse and new delivery note" data-seg-start="0">
-          <figure class="or-fig" data-seg-label="Warehouse"><div class="c-card or-dcrop" style="--ca: 1300 / 370; --cw: 123.08%; --cl: -22.31%; --ct: -20.27%"><img class="c-img" src="../img/caso-ortopedia/deposito.webp" width="1600" height="722" loading="lazy" decoding="async" data-visor-w="1280" alt="The Warehouse screen: tabs To prepare, Sent, History, Restock and Warehouse stock; a search bar and a delivery note from the warehouse to a store, marked “To prepare”."></div></figure>
-          <figure class="or-fig" data-seg-label="New delivery note"><div class="c-card or-dcrop" style="--ca: 620 / 415; --cw: 258.06%; --cl: -46.77%; --ct: -18.07%"><img class="c-img" src="../img/caso-ortopedia/remito.webp" width="1600" height="722" loading="lazy" decoding="async" data-visor-w="1280" alt="The first step of a new internal delivery note: the origin is the central warehouse and the destination is chosen among the three stores. Next come the Products and Review steps."></div></figure>
+          <figure class="or-fig" data-seg-label="Warehouse"><div class="c-card or-dcrop" style="--ca: 1300 / 370; --cw: 123.08%; --cl: -22.31%; --ct: -20.27%"><img class="c-img" src="../img/caso-ortopedia/deposito.webp" width="1600" height="722" loading="lazy" decoding="async" data-visor-w="1280" alt="Orthopedic store management system: the Warehouse screen, with the delivery notes to prepare, sent and the history"></div></figure>
+          <figure class="or-fig" data-seg-label="New delivery note"><div class="c-card or-dcrop" style="--ca: 620 / 415; --cw: 258.06%; --cl: -46.77%; --ct: -18.07%"><img class="c-img" src="../img/caso-ortopedia/remito.webp" width="1600" height="722" loading="lazy" decoding="async" data-visor-w="1280" alt="Orthopedic store management system: the first step of a new internal delivery note, from the central warehouse to one of the three stores"></div></figure>
         </div>
         <p class="or-amp" data-amp></p>
       </div>
